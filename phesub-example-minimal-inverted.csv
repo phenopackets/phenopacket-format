@@ -1,0 +1,14 @@
+"Field", "Patient 1", "Patient 2", "Patient 3 (add more to the right)"
+"Patient Identifier"
+"Patient Age in Years","7.5"
+"Patient Sex","Male"
+"Disease Identifier","OMIM:600919",
+"Disease Name","Long Qt Syndrome 4",
+"Disease Age of Onset in Years","7"
+"Causal Variant (HGVS)",""
+"Phenotype ID","HP:0000001"
+"Phenotype ID","HP:0000002"
+"Phenotype ID","HP:0000003"
+"Phenotype ID",
+"Phenotype ID",
+"Phenotype ID"
