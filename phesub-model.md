@@ -51,6 +51,12 @@ i has_disease [
 
 Each phenotype is an object with `(ID, Age of Onset)`. Here age HPO?
 
+Note that in some simplified derived exchange formats, the set of
+phenotypes for a patient may be a flat list of IDs (TBD?). But in the
+model these are objects.
+
+TODO: post comp? descriptions?
+
 ### Causal Variants
 
 Note we do not explicitly model the structure of the causal variant. This is out of scope. Instead the causal variant is modeled as a string. Some kind of external validation assumed.
