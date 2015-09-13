@@ -1,0 +1,16 @@
+age_in_years: 7.5
+sex: Male
+disease_occurrence:
+  disease:
+    id: OMIM:600919
+    name: Long Qt Syndrome 4
+  onset_age_in_years: 7
+phenotypes:
+  - term:
+      id: HP:0000001
+      name: foo
+    onset: HP:nnnnnn
+  - term:
+      id: HP:0000002
+      name: foo
+    onset: HP:nnnnnn
