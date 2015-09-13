@@ -1,5 +1,7 @@
 NOT NORMATIVE
 
+TODO: UML - and separate OWL into separate document
+
 About this document: this specifies an object model for phesub. Note
 that UML closed-world semantics are assumed. i.e. we may say "An
 individual has zero or one sex". This is a cardinality constraint at
