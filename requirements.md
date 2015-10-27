@@ -43,6 +43,7 @@ fields optional unless explicitly stated:
  * age of onset of disease
  * 1 to N positive phenotype associations for each person - REQUIRED
  * 0 to M negative phenotype associations for each person
+ * Variants in HGVS notation, confirmed or set of variants
 
 TBD: is this sufficient? Below are some additional complex attributes.
 Note that if these are included in the format, then the complexity
@@ -61,13 +62,8 @@ to RDF.
 
 ### Siblings/Cohorts
 
-From M: "be able to represent patients, siblings, and cohorts"
+Represent more than one patient, which could include siblings, parents, and other members of a cohort.
 
-What does this mean? Represent relationships between them? Or is the
-requirement simply that more than one human can be included in a
-submission?
-
-I assume the latter. Note for relationships between the individuals,
-the ped file would be used. TODO: investigate who identifiability is
+Note for relationships between the individuals, the ped file would be included. TODO: investigate who identifiability is
 handled in a ped file, as this will impact how we use id fields.
 
