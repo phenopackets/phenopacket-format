@@ -136,6 +136,10 @@ mapping:
           "source": *sourceRef
           "created": *timestampRef
           "contributors": *contributorsRef
+
+  ### The family profile corresponds to the contents of a PED file.
+  ### The structure used is different; we use a more RDF-conformant model, where
+  ### arbitrary relationship graphs between organisms can be used
   "family_profile":
     type: seq
     required: false
@@ -148,6 +152,9 @@ mapping:
             required: false
           "entity": *entityRef
           "evidence": *evidenceRef
+
+          ## This would come from a subset of RO, corresponding to
+          ## relationships such as biological_father_of
           "relation": &relationRef
             type: str
           "related_to":
