@@ -1,0 +1,26 @@
+// http://yuml.me/diagram/class/draw
+
+[Condition|description:string]<>-type->[ConditionClass]
+[Condition]<>-onset->[TimeOfOnset]
+[Condition]<>-ends->[TimeOfEnd]
+[Condition]^[Phenotype]
+[Condition]^[Disease]
+[Phenotype]<>-type->[PhenotypeClass]
+[TemporalDuration|description:string;rangeStart:date;rangeEnd:date]<>-type->[TemporalDurationClass]
+[TemporalDuration]^-[TimeOfOnset]
+[TemporalDuration]^-[TimeOfEnd]
+
+[TimeOfOnset]<>-type->[TimeOfOnsetClass]
+[TimeOfEnd]<>-type->[TimeOfEndClass]
+
+[OntologyClass|iri:string;label:string{bg:orange}]
+[OntologyClass]^-[ConditionClass{bg:green}]
+[ConditionClass]^-[PhenotypeClass{bg:green}]
+[ConditionClass]^-[DiseaseClass{bg:green}]
+[PhenotypeClass{bg:green}]
+[DiseaseClass{bg:green}]
+[OntologyClass]^-[TemporalDurationClass{bg:green}]
+[TemporalDurationClass]^[TimeOfOnsetClass{bg:green}]
+[TemporalDurationClass]^[TimeOfEndClass{bg:green}]
+
+
