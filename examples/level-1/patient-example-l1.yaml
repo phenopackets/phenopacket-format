@@ -10,7 +10,13 @@ entities:
     type: human
   - id: http://somepatientregistry.org/patient/567
     type: human
-diagnosis_associations:
+admin_profile:
+  - entity: http://somepatientregistry.org/patient/123
+    property: date_of_birth
+    value: 1999-01-01
+    value_type: date
+    source: http://somepatientregistry.org
+diagnosis_profile:
   - entity: http://somepatientregistry.org/patient/123
     created: 2016-01-14
     disease:
@@ -21,7 +27,7 @@ diagnosis_associations:
         type:
           id: HP:0003584
           label: Late onset
-phenotype_associations:
+phenotype_profile:
   - entity: http://somepatientregistry.org/patient/123
     evidence:
       type: observation
@@ -47,7 +53,7 @@ phenotype_associations:
     created: 2016-01-14
     contributors:
       - id: ORCID:nnnn-nnnn-nnnn
-pedigree_associations:
+family_profile:
   - entity: http://somepatientregistry.org/patient/123
     related_to: http://somepatientregistry.org/patient/456
     relation: has_father
