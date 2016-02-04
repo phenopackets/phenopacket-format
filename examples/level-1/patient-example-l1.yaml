@@ -56,6 +56,17 @@ phenotype_profile:
     created: 2016-01-14
     contributors:
       - id: ORCID:nnnn-nnnn-nnnn
+  - entity: http://somepatientregistry.org/patient/234
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        not:
+          id: HP:0001608
+          label: Abnormality of the voice
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
 family_profile:
   - entity: http://somepatientregistry.org/patient/123
     related_to: http://somepatientregistry.org/patient/456

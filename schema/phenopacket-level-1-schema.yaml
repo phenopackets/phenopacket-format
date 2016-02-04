@@ -100,6 +100,13 @@ mapping:
                   "id": *idRef
                   "label":
                     type: str
+                  # support for negation
+                  "not":
+                    type: map
+                    mapping:
+                      "id": *idRef
+                      "label":
+                        type: str
               "onset": &onsetRef
                 type: map
                 mapping:
@@ -193,9 +200,9 @@ mapping:
           "temporal_index":
             type: map
             mapping:
-              "timepoint": &timestampRef
-              "start_time": &timestampRef
-              "end_time": &timestampRef
+              "timepoint": *timestampRef
+              "start_time": *timestampRef
+              "end_time": *timestampRef
           "source": *sourceRef
           "comment": *commentRef
           "created": *timestampRef

@@ -1,72 +1,62 @@
 {
-    "admin_profile": [
+    "entities": [
         {
-            "entity": "http://somepatientregistry.org/patient/123",
-            "property": "date_of_birth",
-            "source": {
-                "id": "http://somepatientregistry.org"
-            },
-            "value": {
-                "type": "date",
-                "literal": "!!date 1999 1 1"
-            }
+            "id": "http://somepatientregistry.org/patient/123",
+            "biological_sex": "male",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/234",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/456",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/567",
+            "type": "human"
         }
     ],
-    "schema": "phenopacket-level-1",
+    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
     "diagnosis_profile": [
         {
-            "entity": "http://somepatientregistry.org/patient/123",
-            "created": "!!date 2016 1 14",
             "disease": {
-                "type": {
-                    "label": "amyotrophic lateral sclerosis type 20",
-                    "id": "OMIM:615426"
-                },
                 "onset": {
                     "type": {
                         "label": "Late onset",
                         "id": "HP:0003584"
                     },
                     "comment": "possibly early to late"
+                },
+                "type": {
+                    "label": "amyotrophic lateral sclerosis type 20",
+                    "id": "OMIM:615426"
                 }
-            }
+            },
+            "entity": "http://somepatientregistry.org/patient/123",
+            "created": "!!date 2016 1 14"
         }
     ],
     "@context": "http://phenopacket.github.io/context/context.jsonld",
-    "entities": [
-        {
-            "type": "human",
-            "biological_sex": "male",
-            "id": "http://somepatientregistry.org/patient/123"
-        },
-        {
-            "type": "human",
-            "id": "http://somepatientregistry.org/patient/234"
-        },
-        {
-            "type": "human",
-            "id": "http://somepatientregistry.org/patient/456"
-        },
-        {
-            "type": "human",
-            "id": "http://somepatientregistry.org/patient/567"
-        }
-    ],
     "family_profile": [
         {
-            "entity": "http://somepatientregistry.org/patient/123",
+            "relation": "has_father",
             "related_to": "http://somepatientregistry.org/patient/456",
-            "relation": "has_father"
+            "entity": "http://somepatientregistry.org/patient/123"
         },
         {
-            "entity": "http://somepatientregistry.org/patient/123",
+            "relation": "has_mother",
             "related_to": "http://somepatientregistry.org/patient/567",
-            "relation": "has_mother"
+            "entity": "http://somepatientregistry.org/patient/123"
         }
     ],
-    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
+    "schema": "phenopacket-level-1",
     "phenotype_profile": [
         {
+            "evidence": {
+                "type": "observation"
+            },
             "contributors": [
                 {
                     "id": "ORCID:nnnn-nnnn-nnnn"
@@ -74,24 +64,24 @@
             ],
             "entity": "http://somepatientregistry.org/patient/123",
             "phenotype": {
-                "type": {
-                    "label": "Muscular dystrophy",
-                    "id": "HP:0003560"
-                },
                 "onset": {
                     "type": {
                         "label": "Late onset",
                         "id": "HP:0003584"
                     }
                 },
+                "type": {
+                    "label": "Muscular dystrophy",
+                    "id": "HP:0003560"
+                },
                 "description": "blah blah"
             },
-            "created": "!!date 2016 1 14",
-            "evidence": {
-                "type": "observation"
-            }
+            "created": "!!date 2016 1 14"
         },
         {
+            "evidence": {
+                "type": "observation"
+            },
             "contributors": [
                 {
                     "id": "ORCID:nnnn-nnnn-nnnn"
@@ -104,9 +94,39 @@
                     "id": "HP:0007354"
                 }
             },
-            "created": "!!date 2016 1 14",
+            "created": "!!date 2016 1 14"
+        },
+        {
             "evidence": {
                 "type": "observation"
+            },
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ],
+            "entity": "http://somepatientregistry.org/patient/234",
+            "phenotype": {
+                "type": {
+                    "not": {
+                        "label": "Abnormality of the voice",
+                        "id": "HP:0001608"
+                    }
+                }
+            },
+            "created": "!!date 2016 1 14"
+        }
+    ],
+    "admin_profile": [
+        {
+            "property": "date_of_birth",
+            "value": {
+                "literal": "!!date 1999 1 1",
+                "type": "date"
+            },
+            "entity": "http://somepatientregistry.org/patient/123",
+            "source": {
+                "id": "http://somepatientregistry.org"
             }
         }
     ]
