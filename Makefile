@@ -1,10 +1,10 @@
 
-all: all_examples
+all: test all_json
 test: test_examples
 
-EXAMPLES=omim-example patient-example
-all_examples: all_examples_l1
-all_examples_l1: $(patsubst %,examples/level-1/%-l1.json,$(EXAMPLES))
+EXAMPLES=omim-example patient-example variant-example
+all_json: all_json_l1
+all_json_l1: $(patsubst %,examples/level-1/%-l1.json,$(EXAMPLES))
 
 test_examples: test_examples_l1
 test_examples_l1: $(patsubst %,examples/level-1/%-l1.report,$(EXAMPLES))

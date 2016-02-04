@@ -19,7 +19,7 @@ mapping:
     unique: true
   "entities":
     type: seq
-    required: true
+    required: false
     sequence:
       - type: map
         mapping:
@@ -44,6 +44,26 @@ mapping:
                 type: str
               "title":
                 type: str
+  "variants":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id": *idRef
+          "label":
+            type: str
+            required: false
+          ## use SO
+          "type": *typeRef
+          "positions":
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  "type": *typeRef
+                  "value":
+                    type: str
   "ontologies":
     type: seq
     sequence:

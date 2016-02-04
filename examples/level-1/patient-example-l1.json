@@ -1,4 +1,57 @@
 {
+    "admin_profile": [
+        {
+            "entity": "http://somepatientregistry.org/patient/123",
+            "property": "date_of_birth",
+            "source": {
+                "id": "http://somepatientregistry.org"
+            },
+            "value": {
+                "type": "date",
+                "literal": "!!date 1999 1 1"
+            }
+        }
+    ],
+    "schema": "phenopacket-level-1",
+    "diagnosis_profile": [
+        {
+            "entity": "http://somepatientregistry.org/patient/123",
+            "created": "!!date 2016 1 14",
+            "disease": {
+                "type": {
+                    "label": "amyotrophic lateral sclerosis type 20",
+                    "id": "OMIM:615426"
+                },
+                "onset": {
+                    "type": {
+                        "label": "Late onset",
+                        "id": "HP:0003584"
+                    },
+                    "comment": "possibly early to late"
+                }
+            }
+        }
+    ],
+    "@context": "http://phenopacket.github.io/context/context.jsonld",
+    "entities": [
+        {
+            "type": "human",
+            "biological_sex": "male",
+            "id": "http://somepatientregistry.org/patient/123"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/234"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/456"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/567"
+        }
+    ],
     "family_profile": [
         {
             "entity": "http://somepatientregistry.org/patient/123",
@@ -11,97 +64,50 @@
             "relation": "has_mother"
         }
     ],
+    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
     "phenotype_profile": [
         {
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ],
             "entity": "http://somepatientregistry.org/patient/123",
             "phenotype": {
+                "type": {
+                    "label": "Muscular dystrophy",
+                    "id": "HP:0003560"
+                },
                 "onset": {
                     "type": {
-                        "id": "HP:0003584",
-                        "label": "Late onset"
+                        "label": "Late onset",
+                        "id": "HP:0003584"
                     }
-                },
-                "type": {
-                    "id": "HP:0003560",
-                    "label": "Muscular dystrophy"
                 },
                 "description": "blah blah"
             },
             "created": "!!date 2016 1 14",
             "evidence": {
                 "type": "observation"
-            },
+            }
+        },
+        {
             "contributors": [
                 {
                     "id": "ORCID:nnnn-nnnn-nnnn"
                 }
-            ]
-        },
-        {
+            ],
             "entity": "http://somepatientregistry.org/patient/234",
             "phenotype": {
                 "type": {
-                    "id": "HP:0007354",
-                    "label": "Amyotrophic lateral sclerosis"
+                    "label": "Amyotrophic lateral sclerosis",
+                    "id": "HP:0007354"
                 }
             },
             "created": "!!date 2016 1 14",
             "evidence": {
                 "type": "observation"
-            },
-            "contributors": [
-                {
-                    "id": "ORCID:nnnn-nnnn-nnnn"
-                }
-            ]
-        }
-    ],
-    "schema": "phenopacket-level-1",
-    "@context": "http://phenopacket.github.io/context/context.jsonld",
-    "admin_profile": [
-        {
-            "entity": "http://somepatientregistry.org/patient/123",
-            "value": "!!date 1999 1 1",
-            "property": "date_of_birth",
-            "value_type": "date",
-            "source": "http://somepatientregistry.org"
-        }
-    ],
-    "diagnosis_profile": [
-        {
-            "entity": "http://somepatientregistry.org/patient/123",
-            "disease": {
-                "id": "OMIM:615426",
-                "onset": {
-                    "type": {
-                        "id": "HP:0003584",
-                        "label": "Late onset"
-                    }
-                },
-                "type": "disease",
-                "label": "amyotrophic lateral sclerosis type 20"
-            },
-            "created": "!!date 2016 1 14"
-        }
-    ],
-    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
-    "entities": [
-        {
-            "id": "http://somepatientregistry.org/patient/123",
-            "biological_sex": "male",
-            "type": "human"
-        },
-        {
-            "id": "http://somepatientregistry.org/patient/234",
-            "type": "human"
-        },
-        {
-            "id": "http://somepatientregistry.org/patient/456",
-            "type": "human"
-        },
-        {
-            "id": "http://somepatientregistry.org/patient/567",
-            "type": "human"
+            }
         }
     ]
 }
