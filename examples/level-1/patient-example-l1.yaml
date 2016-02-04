@@ -13,9 +13,11 @@ entities:
 admin_profile:
   - entity: http://somepatientregistry.org/patient/123
     property: date_of_birth
-    value: 1999-01-01
-    value_type: date
-    source: http://somepatientregistry.org
+    value:
+      literal: 1999-01-01
+      type: date
+    source:
+      id: http://somepatientregistry.org
 diagnosis_profile:
   - entity: http://somepatientregistry.org/patient/123
     created: 2016-01-14

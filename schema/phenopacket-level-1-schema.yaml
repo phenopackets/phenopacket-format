@@ -35,10 +35,27 @@ mapping:
           "biological_sex":
             type: str
             required: false
+          "comment": &commentRef
+            type: str
+          "source": &sourceRef
+            type: map
+            mapping:
+              "id":
+                type: str
+              "title":
+                type: str
+  "ontologies":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          "id": *idRef
+          "version":
+            type: str
   ### collection of diseases associated with an entity
   "diagnosis_profile":
     type: seq
-    required: true
+    required: false
     sequence:
       - type: map
         mapping:
@@ -53,6 +70,7 @@ mapping:
             type: map
             mapping: 
               "type": *typeRef
+              "source": *sourceRef
           "disease": &conditionInstanceRef
             type: map
             mapping:
@@ -66,11 +84,24 @@ mapping:
                 type: map
                 mapping:
                   "type": *typeObjectRef
+                  "comment": *commentRef
               "description": &descriptionRef
                 type: str
+              "comment": *commentRef
+          "comment": *commentRef
+          "source": *sourceRef
+          "contributors": &contributorsRef
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  "id":
+                    type: str
+          "created": &timestampRef
+            type: date
   "phenotype_profile":
     type: seq
-    required: true
+    required: false
     sequence:
       - type: map
         mapping:
@@ -78,6 +109,55 @@ mapping:
             ## note this is the optional ID of the association, NOT the disease class itself
             type: str
             required: false
+          "entity": *entityRef
           "evidence": *evidenceRef
           "phenotype": *conditionInstanceRef
+          "comment": *commentRef
+          "source": *sourceRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
+  "family_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": *entityRef
+          "evidence": *evidenceRef
+          "relation": &relationRef
+            type: str
+          "related_to":
+            type: str
+          "source": *sourceRef
+          "comment": *commentRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
+  "admin_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": *entityRef
+          "evidence": *evidenceRef
+          "property": *typeRef
+          "value": &valueRef
+            type: map
+            mapping:
+              "literal":
+                type: any
+              "type":
+                type: str
+          "source": *sourceRef
+          "comment": *commentRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
           

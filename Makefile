@@ -15,3 +15,4 @@ test_examples_l1: $(patsubst %,examples/level-1/%-l1.report,$(EXAMPLES))
 
 %.report: %.yaml
 	kwalify -E -f schema/phenopacket-level-1-schema.yaml $< 
+#	kwalify -E -f schema/phenopacket-level-1-schema.yaml $<  2>&1 | tee out.log && grep 'INVALID\|ERROR' out.log; test $? -ne 0
