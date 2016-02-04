@@ -20,13 +20,14 @@ diagnosis_profile:
   - entity: http://somepatientregistry.org/patient/123
     created: 2016-01-14
     disease:
-      id: OMIM:615426
-      type: disease
-      label: amyotrophic lateral sclerosis type 20
+      type:
+        id: OMIM:615426
+        label: amyotrophic lateral sclerosis type 20
       onset:
         type:
           id: HP:0003584
           label: Late onset
+        comment: possibly early to late
 phenotype_profile:
   - entity: http://somepatientregistry.org/patient/123
     evidence:

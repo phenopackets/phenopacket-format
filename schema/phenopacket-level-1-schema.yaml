@@ -9,3 +9,75 @@
 ####
 type: map
 mapping:
+  "schema":
+    type: str
+    required: true
+    unique: true
+  "comment":
+    type: str
+    required: false
+    unique: true
+  "entities":
+    type: seq
+    required: true
+    sequence:
+      - type: map
+        mapping:
+          "id": &idRef
+            type: str
+            required: true
+          "label":
+            type: str
+            required: false
+          "type": &typeRef
+            type: str
+            required: false
+          "biological_sex":
+            type: str
+            required: false
+  ### collection of diseases associated with an entity
+  "diagnosis_profile":
+    type: seq
+    required: true
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": &entityRef
+            type: str
+            required: true
+          "evidence": &evidenceRef
+            type: map
+            mapping: 
+              "type": *typeRef
+          "disease": &conditionInstanceRef
+            type: map
+            mapping:
+              "type": &typeObjectRef
+                type: map
+                mapping:
+                  "id": *idRef
+                  "label":
+                    type: str
+              "onset": &onsetRef
+                type: map
+                mapping:
+                  "type": *typeObjectRef
+              "description": &descriptionRef
+                type: str
+  "phenotype_profile":
+    type: seq
+    required: true
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "evidence": *evidenceRef
+          "phenotype": *conditionInstanceRef
+          

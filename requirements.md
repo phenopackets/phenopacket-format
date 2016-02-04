@@ -40,14 +40,21 @@ expresses only a subset of the model.
 
 See util/ for current list of convertors
 
-## Validators
+## Structural Validators
 
 This repository includes validators. We currently use Kwalify as a
 validator. See the schema directory for kwalify schemas.
 
 Other formats must be converted to YAML before validation.
 
-## Minimal Requirements for Patient Phenotypes
+## Semantic Validators
+
+Semantic validators check the semantics of the document - e.g. are the
+correct ontology classes used
+
+## Minimal Requirements
+
+### Minimal Requirements for Patient Phenotypes
 
 The exchange format should define the minimal information to be
 included in a submission, but should also allow for the recording of
