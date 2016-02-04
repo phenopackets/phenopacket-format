@@ -1,0 +1,56 @@
+schema: phenopacket-level-1
+comment: This is an example phenopacket containing two phenotype associations for two patients, together with family information
+entities:
+  - id: http://somepatientregistry.org/patient/123
+    type: human
+    biological_sex: male
+  - id: http://somepatientregistry.org/patient/234
+    type: human
+  - id: http://somepatientregistry.org/patient/456
+    type: human
+  - id: http://somepatientregistry.org/patient/567
+    type: human
+diagnosis_associations:
+  - entity: http://somepatientregistry.org/patient/123
+    created: 2016-01-14
+    disease:
+      id: OMIM:615426
+      type: disease
+      label: amyotrophic lateral sclerosis type 20
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+phenotype_associations:
+  - entity: http://somepatientregistry.org/patient/123
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        id: HP:0003560
+        label: Muscular dystrophy
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+      description: blah blah
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+  - entity: http://somepatientregistry.org/patient/234
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        id: HP:0007354
+        label: Amyotrophic lateral sclerosis
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+pedigree_associations:
+  - entity: http://somepatientregistry.org/patient/123
+    related_to: http://somepatientregistry.org/patient/456
+    relation: has_father
+  - entity: http://somepatientregistry.org/patient/123
+    related_to: http://somepatientregistry.org/patient/567
+    relation: has_mother

@@ -1,0 +1,81 @@
+{
+    "entities": [
+        {
+            "type": "human",
+            "biological_sex": "male",
+            "id": "http://somepatientregistry.org/patient/123"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/234"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/456"
+        },
+        {
+            "type": "human",
+            "id": "http://somepatientregistry.org/patient/567"
+        }
+    ],
+    "schema": "phenopacket-level-1",
+    "phenotype_associations": [
+        {
+            "evidence": {
+                "type": "observation"
+            },
+            "entity": "http://somepatientregistry.org/patient/123",
+            "phenotype": {
+                "type": {
+                    "id": "HP:0003560",
+                    "label": "Muscular dystrophy"
+                },
+                "onset": {
+                    "type": {
+                        "id": "HP:0003584",
+                        "label": "Late onset"
+                    }
+                },
+                "description": "blah blah"
+            },
+            "created": "!!date 2016 1 14",
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ]
+        },
+        {
+            "evidence": {
+                "type": "observation"
+            },
+            "entity": "http://somepatientregistry.org/patient/234",
+            "phenotype": {
+                "type": {
+                    "id": "HP:0007354",
+                    "label": "Amyotrophic lateral sclerosis"
+                }
+            },
+            "created": "!!date 2016 1 14",
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ]
+        }
+    ],
+    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
+    "@context": "http://obofoundry.github.io/registry/context.jsonld",
+    "pedigree_associations": [
+        {
+            "related_to": "http://somepatientregistry.org/patient/456",
+            "entity": "http://somepatientregistry.org/patient/123",
+            "relation": "has_father"
+        },
+        {
+            "related_to": "http://somepatientregistry.org/patient/567",
+            "entity": "http://somepatientregistry.org/patient/123",
+            "relation": "has_mother"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+####
+#### Use kwalify and this schema to validate the config files.
+#### Example:
+####    kwalify -E -m ./metadata/db-xrefs.schema.yaml
+####    kwalify -E -f ./metadata/db-xrefs.schema.yaml ./metadata/db-xrefs.yaml
+####
+#### To convert to JSON once passed:
+####    ./node_modules/yamljs/bin/yaml2json -p ./metadata/db-xrefs.yaml > ./metadata/db-xrefs.json
+####
+type: map
+mapping:
