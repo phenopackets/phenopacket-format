@@ -175,6 +175,8 @@ mapping:
             required: false
           "entity": *entityRef
           "evidence": *evidenceRef
+
+          ## properties can include things such as DOB, Age
           "property": *typeRef
           "value": &valueRef
             type: map
@@ -183,6 +185,17 @@ mapping:
                 type: any
               "type":
                 type: str
+
+          ## the time at which the entity-property-value mapping is true.
+          ## for synchronic properties (ie ones that do not change like DOB)
+          ## this is optional, and semantically equivalent to "all times"
+          ## for diachronic properties (e.g. Age, in some cases gender) this is vital
+          "temporal_index":
+            type: map
+            mapping:
+              "timepoint": &timestampRef
+              "start_time": &timestampRef
+              "end_time": &timestampRef
           "source": *sourceRef
           "comment": *commentRef
           "created": *timestampRef
