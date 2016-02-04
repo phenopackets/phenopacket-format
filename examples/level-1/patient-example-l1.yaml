@@ -1,0 +1,76 @@
+schema: phenopacket-level-1
+comment: This is an example phenopacket containing two phenotype associations for two patients, together with family information
+entities:
+  - id: http://somepatientregistry.org/patient/123
+    type: human
+    biological_sex: male
+  - id: http://somepatientregistry.org/patient/234
+    type: human
+  - id: http://somepatientregistry.org/patient/456
+    type: human
+  - id: http://somepatientregistry.org/patient/567
+    type: human
+admin_profile:
+  - entity: http://somepatientregistry.org/patient/123
+    property: date_of_birth
+    value:
+      literal: 1999-01-01
+      type: date
+    source:
+      id: http://somepatientregistry.org
+diagnosis_profile:
+  - entity: http://somepatientregistry.org/patient/123
+    created: 2016-01-14
+    disease:
+      type:
+        id: OMIM:615426
+        label: amyotrophic lateral sclerosis type 20
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+        comment: possibly early to late
+phenotype_profile:
+  - entity: http://somepatientregistry.org/patient/123
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        id: HP:0003560
+        label: Muscular dystrophy
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+      description: blah blah
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+  - entity: http://somepatientregistry.org/patient/234
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        id: HP:0007354
+        label: Amyotrophic lateral sclerosis
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+  - entity: http://somepatientregistry.org/patient/234
+    evidence:
+      type: observation
+    phenotype:
+      type:
+        not:
+          id: HP:0001608
+          label: Abnormality of the voice
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+family_profile:
+  - entity: http://somepatientregistry.org/patient/123
+    related_to: http://somepatientregistry.org/patient/456
+    relation: has_father
+  - entity: http://somepatientregistry.org/patient/123
+    related_to: http://somepatientregistry.org/patient/567
+    relation: has_mother

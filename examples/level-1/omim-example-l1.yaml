@@ -1,0 +1,41 @@
+schema: phenopacket-level-1
+comment: This is an example phenopacket containing one disease and two associations
+ontologies:
+  - id: hp
+    version: "2016-02-01"
+entities:
+  - id: OMIM:615426
+    type: disease
+    label: amyotrophic lateral sclerosis type 20
+phenotype_profile:
+  - entity: OMIM:615426
+    evidence:
+      type: TAS
+      source:
+        id: PMID:23455423
+        title: Mutations in prion-like domains in hnRNPA2B1 and hnRNPA1 cause multisystem proteinopathy and ALS
+    phenotype:
+      type:
+        id: HP:0003560
+        label: Muscular dystrophy
+      onset:
+        type:
+          id: HP:0003584
+          label: Late onset
+      description: blah blah
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn
+  - entity: OMIM:615426
+    evidence:
+      type: IEA
+      source:
+        id: OMIM:615426
+    phenotype:
+      type:
+        id: HP:0007354
+        label: Amyotrophic lateral sclerosis
+    comment: Disease name contained:amyotrophic lateral sclerosis 20
+    created: 2016-01-14
+    contributors:
+      - id: ORCID:nnnn-nnnn-nnnn

@@ -1,0 +1,133 @@
+{
+    "entities": [
+        {
+            "id": "http://somepatientregistry.org/patient/123",
+            "biological_sex": "male",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/234",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/456",
+            "type": "human"
+        },
+        {
+            "id": "http://somepatientregistry.org/patient/567",
+            "type": "human"
+        }
+    ],
+    "comment": "This is an example phenopacket containing two phenotype associations for two patients, together with family information",
+    "diagnosis_profile": [
+        {
+            "disease": {
+                "onset": {
+                    "type": {
+                        "label": "Late onset",
+                        "id": "HP:0003584"
+                    },
+                    "comment": "possibly early to late"
+                },
+                "type": {
+                    "label": "amyotrophic lateral sclerosis type 20",
+                    "id": "OMIM:615426"
+                }
+            },
+            "entity": "http://somepatientregistry.org/patient/123",
+            "created": "!!date 2016 1 14"
+        }
+    ],
+    "@context": "http://phenopacket.github.io/context/context.jsonld",
+    "family_profile": [
+        {
+            "relation": "has_father",
+            "related_to": "http://somepatientregistry.org/patient/456",
+            "entity": "http://somepatientregistry.org/patient/123"
+        },
+        {
+            "relation": "has_mother",
+            "related_to": "http://somepatientregistry.org/patient/567",
+            "entity": "http://somepatientregistry.org/patient/123"
+        }
+    ],
+    "schema": "phenopacket-level-1",
+    "phenotype_profile": [
+        {
+            "evidence": {
+                "type": "observation"
+            },
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ],
+            "entity": "http://somepatientregistry.org/patient/123",
+            "phenotype": {
+                "onset": {
+                    "type": {
+                        "label": "Late onset",
+                        "id": "HP:0003584"
+                    }
+                },
+                "type": {
+                    "label": "Muscular dystrophy",
+                    "id": "HP:0003560"
+                },
+                "description": "blah blah"
+            },
+            "created": "!!date 2016 1 14"
+        },
+        {
+            "evidence": {
+                "type": "observation"
+            },
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ],
+            "entity": "http://somepatientregistry.org/patient/234",
+            "phenotype": {
+                "type": {
+                    "label": "Amyotrophic lateral sclerosis",
+                    "id": "HP:0007354"
+                }
+            },
+            "created": "!!date 2016 1 14"
+        },
+        {
+            "evidence": {
+                "type": "observation"
+            },
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ],
+            "entity": "http://somepatientregistry.org/patient/234",
+            "phenotype": {
+                "type": {
+                    "not": {
+                        "label": "Abnormality of the voice",
+                        "id": "HP:0001608"
+                    }
+                }
+            },
+            "created": "!!date 2016 1 14"
+        }
+    ],
+    "admin_profile": [
+        {
+            "property": "date_of_birth",
+            "value": {
+                "literal": "!!date 1999 1 1",
+                "type": "date"
+            },
+            "entity": "http://somepatientregistry.org/patient/123",
+            "source": {
+                "id": "http://somepatientregistry.org"
+            }
+        }
+    ]
+}

@@ -1,0 +1,210 @@
+####
+#### Use kwalify and this schema to validate the config files.
+#### Example:
+####    kwalify -E -m ./metadata/db-xrefs.schema.yaml
+####    kwalify -E -f ./metadata/db-xrefs.schema.yaml ./metadata/db-xrefs.yaml
+####
+#### To convert to JSON once passed:
+####    ./node_modules/yamljs/bin/yaml2json -p ./metadata/db-xrefs.yaml > ./metadata/db-xrefs.json
+####
+type: map
+mapping:
+  "schema":
+    type: str
+    required: true
+    unique: true
+  "comment":
+    type: str
+    required: false
+    unique: true
+  "entities":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id": &idRef
+            type: str
+            required: true
+          "label":
+            type: str
+            required: false
+          "type": &typeRef
+            type: str
+            required: false
+          "biological_sex":
+            type: str
+            required: false
+          "comment": &commentRef
+            type: str
+          "source": &sourceRef
+            type: map
+            mapping:
+              "id":
+                type: str
+              "title":
+                type: str
+  "variants":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id": *idRef
+          "label":
+            type: str
+            required: false
+          ## use SO
+          "type": *typeRef
+          "positions":
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  "type": *typeRef
+                  "value":
+                    type: str
+  "ontologies":
+    type: seq
+    sequence:
+      - type: map
+        mapping:
+          "id": *idRef
+          "version":
+            type: str
+  ### collection of diseases associated with an entity
+  "diagnosis_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": &entityRef
+            type: str
+            required: true
+          "evidence": &evidenceRef
+            type: map
+            mapping: 
+              "type": *typeRef
+              "source": *sourceRef
+          "disease": &conditionInstanceRef
+            type: map
+            mapping:
+              "type": &typeObjectRef
+                type: map
+                mapping:
+                  "id": *idRef
+                  "label":
+                    type: str
+                  # support for negation
+                  "not":
+                    type: map
+                    mapping:
+                      "id": *idRef
+                      "label":
+                        type: str
+              "onset": &onsetRef
+                type: map
+                mapping:
+                  "type": *typeObjectRef
+                  "comment": *commentRef
+              "description": &descriptionRef
+                type: str
+              "comment": *commentRef
+          "comment": *commentRef
+          "source": *sourceRef
+          "contributors": &contributorsRef
+            type: seq
+            sequence:
+              - type: map
+                mapping:
+                  "id":
+                    type: str
+          "created": &timestampRef
+            type: date
+  "phenotype_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": *entityRef
+          "evidence": *evidenceRef
+          "phenotype": *conditionInstanceRef
+          "comment": *commentRef
+          "source": *sourceRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
+
+  ### The family profile corresponds to the contents of a PED file.
+  ### The structure used is different; we use a more RDF-conformant model, where
+  ### arbitrary relationship graphs between organisms can be used
+  "family_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": *entityRef
+          "evidence": *evidenceRef
+
+          ## This would come from a subset of RO, corresponding to
+          ## relationships such as biological_father_of
+          "relation": &relationRef
+            type: str
+          "related_to":
+            type: str
+          "source": *sourceRef
+          "comment": *commentRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
+  "admin_profile":
+    type: seq
+    required: false
+    sequence:
+      - type: map
+        mapping:
+          "id":
+            ## note this is the optional ID of the association, NOT the disease class itself
+            type: str
+            required: false
+          "entity": *entityRef
+          "evidence": *evidenceRef
+
+          ## properties can include things such as DOB, Age
+          "property": *typeRef
+          "value": &valueRef
+            type: map
+            mapping:
+              "literal":
+                type: any
+              "type":
+                type: str
+
+          ## the time at which the entity-property-value mapping is true.
+          ## for synchronic properties (ie ones that do not change like DOB)
+          ## this is optional, and semantically equivalent to "all times"
+          ## for diachronic properties (e.g. Age, in some cases gender) this is vital
+          "temporal_index":
+            type: map
+            mapping:
+              "timepoint": *timestampRef
+              "start_time": *timestampRef
+              "end_time": *timestampRef
+          "source": *sourceRef
+          "comment": *commentRef
+          "created": *timestampRef
+          "contributors": *contributorsRef
+          

@@ -1,0 +1,53 @@
+{
+    "phenotype_profile": [
+        {
+            "phenotype": {
+                "type": {
+                    "id": "HP:0003560",
+                    "label": "Muscular dystrophy"
+                },
+                "description": "blah blah",
+                "onset": {
+                    "type": {
+                        "id": "HP:0003584",
+                        "label": "Late onset"
+                    }
+                }
+            },
+            "evidence": {
+                "type": "TAS",
+                "source": {
+                    "title": "Mutations in NM_123 cause multisystem proteinopathy and ALS",
+                    "id": "PMID:FAKE1234"
+                }
+            },
+            "entity": "_:v1",
+            "created": "!!date 2016 1 14",
+            "contributors": [
+                {
+                    "id": "ORCID:nnnn-nnnn-nnnn"
+                }
+            ]
+        }
+    ],
+    "ontologies": [
+        {
+            "id": "hp",
+            "version": "2016-02-01"
+        }
+    ],
+    "variants": [
+        {
+            "positions": [
+                {
+                    "type": "HGVS",
+                    "value": "NM_123:c.-123C>T"
+                }
+            ],
+            "id": "_:v1"
+        }
+    ],
+    "@context": "http://phenopacket.github.io/context/context.jsonld",
+    "schema": "phenopacket-level-1",
+    "comment": "This is an example phenopacket containing one variant to phenotype association"
+}

@@ -1,33 +1,60 @@
 ## Requirements
 
-The format is designed to be used to describe phenotypes associated
-with a human patient, together with asserted hypothetical causal
-variants (either HGVS or build plus coords).
+The format is designed to be used to describe phenotypic descriptions
+to be applied in a large variety of contexts, including, but not
+limited to:
 
-The format is intended for rare and undiagnosed disease patients. It
-is not intended for cancer patients (although presence of cancer may
-be a feature of the disease). It is not intended for common disease
-patients. It is not intended to do the work of an EHR. For example, it
-would not record any history of treatment.
+ * human patients
+ * groupings of human patients, stratified by disease type
+ * genes
+ * variants or collections of variants
+ * any of the above in non-human context
 
-The intent is that a file conforming to this format is submitted to
-either a journal or patient registry. In the case of the former, the
-submitter would be a clinical researcher, in the case of the latter,
-the submitter could be any of the following: clinician, family,
-individual, ...
+## Levels
 
-The format is intended primarily as a submission format rather than a
-machine-to-machine exchange format. As such it must be easy to
-author. We would like submitters to use some kind of application
-(desktop or web) that would generate the file, but to maximize
-adoption we do not impose the need for a tool.
+Because different levels of precision are required for different
+contexts, the schema is organized according to *levels* of
+expressivity.
 
-We do not have to dictate one single format. One possibility is
-multiple formats with a unified data model and specified
-conversions. This will allow us to have technophobic submitters use
-Excel to generate a CSV, and more sophisticated submitters or
-submitters who are using the appropriate tooling to express things in
-more depth.
+The most basic level is level-1
+
+## Uses
+
+The format is intended for a variety of uses: as a *submission*
+format, for example, for submitting to a registry or database, or
+*embedding* in a web page. It is also intended as an *authoring*
+format. It is also usable for machine to machine interchange.
+
+## Multiple Formats, One Model
+
+We define a single *model*, but allow for multiple different
+*syntaxes* or *formats*, for different purposes. Specifically:
+
+ * Tab-Separated Variables (TSV): for authoring using standard spreadsheet tools like google docs or Excel
+ * JSON: for machine-to-machine interchange
+ * YAML: for authoring, submission and exchange
+ * RDF
+
+All of these are semantically equivalent *except* for TSV, which
+expresses only a subset of the model.
+
+See util/ for current list of convertors
+
+## Structural Validators
+
+This repository includes validators. We currently use Kwalify as a
+validator. See the schema directory for kwalify schemas.
+
+Other formats must be converted to YAML before validation.
+
+## Semantic Validators
+
+Semantic validators check the semantics of the document - e.g. are the
+correct ontology classes used
+
+## Minimal Requirements
+
+### Minimal Requirements for Patient Phenotypes
 
 The exchange format should define the minimal information to be
 included in a submission, but should also allow for the recording of
@@ -66,4 +93,5 @@ Represent more than one patient, which could include siblings, parents, and othe
 
 Note for relationships between the individuals, the ped file would be included. TODO: investigate who identifiability is
 handled in a ped file, as this will impact how we use id fields.
+
 
