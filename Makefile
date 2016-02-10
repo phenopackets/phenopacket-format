@@ -2,7 +2,7 @@
 all: test all_json
 test: test_examples
 
-EXAMPLES=omim-example patient-example variant-example
+EXAMPLES=omim-example patient-example variant-example journal-example
 all_json: all_json_l1
 all_json_l1: $(patsubst %,examples/level-1/%-l1.json,$(EXAMPLES))
 
