@@ -2,432 +2,631 @@
 schema: journal-example-level-1
 comment: 2q31.1 microdeletion syndrome: case report and literature review
 entities:
-  - id: patient 1
+  - id: "PMC4498842#patient1"
     type: human
     biological_sex: male
 phenotype_profile:
-  - entity: patient 1
+  - entity: "PMC4498842#patient1"
     evidence:
-      ###????
-      type: 
+      type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: 2q31.1 microdeletion syndrome: case report and literature review
-    phenotype:
-      type:
-        id: 
-        label: 
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-      description: Observed at birth
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0002-9353-5498
-  - entity: http://monarchinitiative.org/patient/1
-    evidence:
-      type: TAS
-      source:
-        id: "26561570"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001276
-        label: Hypertonia
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0008936
+        label: truncal hypotonia
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0002179
-        label: Opisthotonus
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0001837
+        label: Broad toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001612
-        label: Weak cry
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0001845
+        label: Overlapping toes
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0000478
-        label: Abnormality of the eye
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0001999
+        label: Abnormal Facial Shape
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001639
-        label: Abnormality of the eye
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0010554
+        label: Cutaneous finger syndactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        not:
-          id: HP:0001635
-          label: heart failure
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: OrphaNet:251014
+        label: 2q31.1 microdeletion syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-          id: HP:0002104
-          label: Apnea
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0002079
+        label: Hypoplasia of the corpus callosum
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-          id: HP:0007105
-          label: infantile encephalopathy
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: ORDO:251014
+        label: 2q31.1 microdeletion syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-          id: HP:0006789
-          label: mitochondrial encephalopathy
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0001182
+        label: tapered finger
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001276
-        label: Hypertonia
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0001845
+        label: overlapping toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0002179
-        label: Opisthotonus
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/2
+        id: UBERON:0007221
+        label: neonate stage
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0002179
-        label: Opisthotonus
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/1
+        id: HP:0000612
+        label: coloboma iris
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001639
-        label: hypertrophic cardiomyopathy
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:000,589
+        label: ocular colobomas
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0001639
-        label: hypertrophic cardiomyopathy
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0002814
+        label: involvement leg
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0012758
-        label: neurodevelopmental delay
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0040064
+        label: abnormality limbs
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
-
-    phenotype:
-      type:
-        id: HP:0001252
-        label: hypotonia
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-      description: Observed at 2 months of age
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-
-  - entity: http://monarchinitiative.org/patient/2
-    evidence:
-      type: TAS
-      source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0003202
-        label: skeletal muscle atrophy
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-      description: Observed at 2 months of age
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0002813
+        label: limb disorder
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        id: HP:0000407
-        label: Sensorineural hearing impairment
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-      description: Observed at 2 months of age
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0001838
+        label: congenital vertical talus
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        not:
-          id: HP:0000639
-          label: nystagmus
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0012385
+        label: camptodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        not:
-          id: HP:0000508
-          label: ptosis
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0030084
+        label: clinodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-        not:
-          id: HP:0000546
-          label: retinal degneration
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
-
-  - entity: http://monarchinitiative.org/patient/2
+        id: HP:0000252
+        label: microcephaly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
     evidence:
-      type: TAS
+      type: TAS # Traceable author statement
       source:
-        id: "26561570"
+        id: "PMC4498842"
         title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
     phenotype:
       type:
-          id: HP:0002104
-          label: Apnea
-      onset:
-        type:
-          id: HP:0003593
-          label: Infantile onset
-    created: 2016-02-09
-    contributors:
-      - id: ORCID:0000-0001-8793-9982
+        id: HP:0001518
+        label: low birth weight
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0007759
+        label: corneal stromal opacity
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001199
+        label: triphalangy thumb
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001631
+        label: disorder atrial septum
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001671
+        label: finding cardiac septa
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0010066
+        label: duplicated hallux
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0010055
+        label: broad great toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0011304
+        label: broad thumb
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001159
+        label: syndactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001156
+        label: brachydactyly syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001166
+        label: arachnodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0100257
+        label: ectrodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001171
+        label: ectrodactyly hand
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001792
+        label: hypoplastic nails
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMC4498842#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMC4498842"
+        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+    phenotype:
+      type:
+        id: HP:0001155
+        label: abnormality hand
 variants:
-  - id: _:v1
-    positions:
-      - type: OPA1
-        value: "homozygous c.1601T>G"  ###?? is this right?  # how to map.
-family_profile:
-  - entity: http://monarchinitiative.org/patient/1
-    related_to: http://monarchinitiative.org/patient/1
-    relation: has_sister
-
-
-### some phenotypes missed
+  - id: 46,XX,del(2)(q31.1;q33.1) #is this right? more needed?
