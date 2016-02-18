@@ -11,7 +11,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0008936
@@ -29,7 +29,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001837
@@ -47,7 +47,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001845
@@ -65,7 +65,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001999
@@ -83,7 +83,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0010554
@@ -101,7 +101,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: OrphaNet:251014
@@ -119,7 +119,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0002079
@@ -137,7 +137,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: ORDO:251014
@@ -155,7 +155,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001182
@@ -173,7 +173,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001845
@@ -191,7 +191,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: UBERON:0007221
@@ -209,7 +209,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0000612
@@ -227,7 +227,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:000,589
@@ -245,7 +245,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0002814
@@ -263,7 +263,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0040064
@@ -281,7 +281,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0002813
@@ -299,7 +299,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001838
@@ -317,7 +317,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0012385
@@ -335,7 +335,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0030084
@@ -353,7 +353,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0000252
@@ -371,7 +371,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001518
@@ -389,7 +389,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0007759
@@ -407,7 +407,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001199
@@ -425,7 +425,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001631
@@ -443,7 +443,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001671
@@ -461,7 +461,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0010066
@@ -479,7 +479,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0010055
@@ -497,7 +497,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0011304
@@ -515,7 +515,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001159
@@ -533,7 +533,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001156
@@ -551,7 +551,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001166
@@ -569,7 +569,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0100257
@@ -587,7 +587,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001171
@@ -605,7 +605,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001792
@@ -623,7 +623,7 @@ phenotype_profile:
       type: TAS # Traceable author statement
       source:
         id: "PMC4498842"
-        title: Fatal infantile mitochondrial encephalomyopathy, hypertrophic cardiomyopathy and optic atrophy associated with a homozygous OPA1 mutation
+        title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001155
