@@ -2,15 +2,15 @@
 schema: journal-example-level-1
 comment: 2q31.1 microdeletion syndrome: case report and literature review
 entities:
-  - id: "PMC4498842#patient1"
+  - id: "PMID:26185628#patient1"
     type: human
     biological_sex: male
 phenotype_profile:
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -24,11 +24,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -42,11 +42,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -60,11 +60,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -78,11 +78,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -96,11 +96,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -114,11 +114,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -132,11 +132,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -150,11 +150,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -168,11 +168,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -186,11 +186,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -204,11 +204,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -222,11 +222,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -240,11 +240,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -258,11 +258,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -276,11 +276,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -294,11 +294,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -312,11 +312,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -330,11 +330,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -348,11 +348,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -366,11 +366,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -384,11 +384,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -402,11 +402,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -420,11 +420,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -438,11 +438,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -456,11 +456,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -474,11 +474,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -492,11 +492,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -510,11 +510,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -528,11 +528,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -546,11 +546,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -564,11 +564,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -582,11 +582,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -600,11 +600,11 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
@@ -618,15 +618,18 @@ phenotype_profile:
       created: 2016-02-09
       contributors:
         - id: ORCID:0000-0002-9353-5498
-  - entity: "PMC4498842#patient1"
+  - entity: "PMID:26185628#patient1"
     evidence:
       type: TAS # Traceable author statement
       source:
-        id: "PMC4498842"
+        id: "PMID:26185628"
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
         id: HP:0001155
         label: abnormality hand
 variants:
-  - id: 46,XX,del(2)(q31.1;q33.1) #is this right? more needed?
+  - id: _:v1 
+   positions:
+    type: 
+     ICSN value: "46,XX,del(2)(q31.1;q33.1)"
