@@ -230,7 +230,7 @@ phenotype_profile:
         title: 2q31.1 microdeletion syndrome: case report and literature review
     phenotype:
       type:
-        id: HP:000,589
+        id: HP:0000589
         label: ocular colobomas
        onset:
           type:
