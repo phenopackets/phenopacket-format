@@ -109,17 +109,12 @@ phenotype_profile:
             label: 
         description:                        
      
-     # Negated phenotype - not sure I did this correctly
+     # Negated phenotype 
      phenotype:
-      "not": 
       type:
-        id: HP:0000504
-        label: Abnormality of vision
-       onset:
-          type:
-            id: 
-            label: 
-        description: 
+        not:
+          id: HP:0000504
+          label: Abnormality of vision
         
      phenotype:
       type:
@@ -140,18 +135,13 @@ phenotype_profile:
             label: 
         description:  
         
-  # Negated phenotype - not sure I did this correctly
+    # Negated phenotype 
      phenotype:
-      "not":          
       type:
-        id: HP:0001250
-        label: Seizures      
-       onset:
-          type:
-            id: 
-            label: 
-        description: 
-        
+        not:
+          id: HP:0001250
+          label:Seizures   
+
      phenotype:
       type:
         id: HP:0100716
