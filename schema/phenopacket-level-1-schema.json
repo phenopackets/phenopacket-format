@@ -1,0 +1,99 @@
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:packet:Packet",
+  "properties" : {
+    "entities" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity",
+        "properties" : {
+          "id" : {
+            "type" : "string"
+          },
+          "label" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string",
+            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
+          }
+        }
+      }
+    },
+    "phenotype_profile" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:PhenotypeAssociation",
+        "properties" : {
+          "evidenceList" : {
+            "type" : "array",
+            "items" : {
+              "type" : "any"
+            }
+          },
+          "phenotype" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Phenotype",
+            "properties" : {
+              "description" : {
+                "type" : "string"
+              },
+              "type" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:OntologyClass",
+                "description" : "A class in an ontology which this condition instantiates",
+                "properties" : {
+                  "id" : {
+                    "type" : "string"
+                  },
+                  "label" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          },
+          "entity" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity"
+          }
+        }
+      }
+    },
+    "diagnosis_profile" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrenceAssociation",
+        "properties" : {
+          "evidenceList" : {
+            "type" : "array",
+            "items" : {
+              "type" : "any"
+            }
+          },
+          "disease" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrence",
+            "properties" : {
+              "description" : {
+                "type" : "string"
+              },
+              "type" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:OntologyClass",
+                "description" : "A class in an ontology which this condition instantiates"
+              }
+            }
+          },
+          "entity" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity"
+          }
+        }
+      }
+    }
+  }
+}
