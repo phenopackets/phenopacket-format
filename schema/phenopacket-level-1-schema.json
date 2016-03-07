@@ -8,6 +8,31 @@
         "type" : "object",
         "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity",
         "properties" : {
+          "classList" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass",
+              "properties" : {
+                "id" : {
+                  "type" : "string"
+                },
+                "label" : {
+                  "type" : "string"
+                }
+              }
+            }
+          },
+          "negatedClassList" : {
+            "type" : "array",
+            "items" : {
+              "type" : "object",
+              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+            }
+          },
+          "description" : {
+            "type" : "string"
+          },
           "id" : {
             "type" : "string"
           },
@@ -37,21 +62,25 @@
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Phenotype",
             "properties" : {
+              "classList" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
+              "negatedClassList" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
               "description" : {
                 "type" : "string"
               },
-              "type" : {
-                "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:OntologyClass",
-                "description" : "A class in an ontology which this condition instantiates",
-                "properties" : {
-                  "id" : {
-                    "type" : "string"
-                  },
-                  "label" : {
-                    "type" : "string"
-                  }
-                }
+              "timeOfOnset" : {
+                "type" : "string"
               }
             }
           },
@@ -78,13 +107,25 @@
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrence",
             "properties" : {
+              "classList" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
+              "negatedClassList" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
               "description" : {
                 "type" : "string"
               },
-              "type" : {
-                "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:OntologyClass",
-                "description" : "A class in an ontology which this condition instantiates"
+              "timeOfOnset" : {
+                "type" : "string"
               }
             }
           },
