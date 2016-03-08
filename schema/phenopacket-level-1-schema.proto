@@ -1,0 +1,150 @@
+// org.monarchinitiative.ppk.model.packet.Packet
+
+// Message for org.monarchinitiative.ppk.model.packet.Packet
+message Packet {
+  optional string id = 1;
+  optional string title = 2;
+  repeated Entity entities = 3;
+  repeated Variant variants = 4;
+  repeated Person persons = 5;
+  repeated Organism organisms = 6;
+  repeated PhenotypeAssociation phenotype_profile = 7;
+  repeated DiseaseOccurrenceAssociation diagnosis_profile = 8;
+  repeated EnvironmentAssociation environment_profile = 9;
+}
+// Enum for org.monarchinitiative.ppk.model.meta.EntityType
+enum EntityType {
+  disease = 0;
+  organism = 1;
+  patient = 2;
+  variant = 3;
+  genotype = 4;
+}
+// Message for org.monarchinitiative.ppk.model.meta.Evidence
+message Evidence {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.monarchinitiative.ppk.model.condition.OrganismalSite
+message OrganismalSite {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.monarchinitiative.ppk.model.organism.Organism
+message Organism {
+  optional EntityType type = 1;
+  optional OntologyClass taxon = 2;
+  optional OntologyClass strain = 3;
+  repeated OntologyClass types = 4;
+  repeated OntologyClass negated_types = 5;
+  optional string description = 6;
+  optional string id = 7;
+  optional string label = 8;
+}
+// Message for org.monarchinitiative.ppk.model.condition.DiseaseOccurrence
+message DiseaseOccurrence {
+  optional DiseaseStage stage = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional OrganismalSite has_location = 5;
+  optional TemporalRegion onset = 6;
+  optional TemporalRegion offset = 7;
+  optional ConditionSeverity severity = 8;
+}
+// Message for org.monarchinitiative.ppk.model.environment.Environment
+message Environment {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.monarchinitiative.ppk.model.organism.Person
+message Person {
+  optional EntityType type = 1;
+  optional OntologyClass taxon = 2;
+  optional OntologyClass strain = 3;
+  repeated OntologyClass types = 4;
+  repeated OntologyClass negated_types = 5;
+  optional string description = 6;
+  optional string id = 7;
+  optional string label = 8;
+}
+// Message for org.monarchinitiative.ppk.model.condition.Phenotype
+message Phenotype {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional OrganismalSite has_location = 4;
+  optional TemporalRegion onset = 5;
+  optional TemporalRegion offset = 6;
+  optional ConditionSeverity severity = 7;
+}
+// Message for org.monarchinitiative.ppk.model.condition.DiseaseOccurrenceAssociation
+message DiseaseOccurrenceAssociation {
+  optional DiseaseOccurrence disease = 1;
+  optional string entity = 2;
+  repeated Evidence evidence_list = 3;
+}
+// Message for org.monarchinitiative.ppk.model.ontology.OntologyClass
+message OntologyClass {
+  optional string id = 1;
+  optional string label = 2;
+}
+// Message for org.monarchinitiative.ppk.model.condition.TemporalRegion
+message TemporalRegion {
+  optional string startTime = 1;
+  optional string endTime = 2;
+  repeated OntologyClass types = 3;
+  repeated OntologyClass negated_types = 4;
+  optional string description = 5;
+}
+// Message for org.monarchinitiative.ppk.model.meta.Entity
+message Entity {
+  optional EntityType type = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional string id = 5;
+  optional string label = 6;
+}
+// Message for org.monarchinitiative.ppk.model.condition.PhenotypeAssociation
+message PhenotypeAssociation {
+  optional Phenotype phenotype = 1;
+  optional string entity = 2;
+  repeated Evidence evidence_list = 3;
+}
+// Message for org.monarchinitiative.ppk.model.environment.EnvironmentAssociation
+message EnvironmentAssociation {
+  optional Environment environment = 1;
+  optional string entity = 2;
+  repeated Evidence evidence_list = 3;
+}
+// Message for org.monarchinitiative.ppk.model.condition.ConditionSeverity
+message ConditionSeverity {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.monarchinitiative.ppk.model.genome.Variant
+message Variant {
+  optional EntityType type = 1;
+  optional string descriptionHGVS = 2;
+  repeated OntologyClass types = 3;
+  repeated OntologyClass negated_types = 4;
+  optional string description = 5;
+  optional string id = 6;
+  optional string label = 7;
+}
+// Message for org.monarchinitiative.ppk.model.condition.DiseaseStage
+message DiseaseStage {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional OrganismalSite has_location = 4;
+  optional TemporalRegion onset = 5;
+  optional TemporalRegion offset = 6;
+  optional ConditionSeverity severity = 7;
+}
+
