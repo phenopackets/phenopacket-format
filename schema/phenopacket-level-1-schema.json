@@ -231,6 +231,33 @@
                 "type" : "string",
                 "description" : "An optional free text description that can enhance the ontology class based description"
               },
+              "has_location" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                "description" : "the location in an organism or cell in which the phenotype manifests",
+                "properties" : {
+                  "types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "negated_types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be assigned any number of negative classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "description" : {
+                    "type" : "string",
+                    "description" : "An optional free text description that can enhance the ontology class based description"
+                  }
+                }
+              },
               "onset" : {
                 "type" : "object",
                 "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
@@ -315,6 +342,11 @@
                 "type" : "string",
                 "description" : "An optional free text description that can enhance the ontology class based description"
               },
+              "has_location" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                "description" : "the location in an organism or cell in which the phenotype manifests"
+              },
               "onset" : {
                 "type" : "object",
                 "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
@@ -324,6 +356,51 @@
                 "type" : "object",
                 "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition ceases to manifest"
+              }
+            }
+          },
+          "entity" : {
+            "type" : "string"
+          },
+          "evidence_list" : {
+            "type" : "array",
+            "items" : {
+              "type" : "any"
+            }
+          }
+        }
+      }
+    },
+    "environment_profile" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:EnvironmentAssociation",
+        "properties" : {
+          "environment" : {
+            "type" : "object",
+            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+            "description" : "The environment which this association is about",
+            "properties" : {
+              "types" : {
+                "type" : "array",
+                "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
+              "negated_types" : {
+                "type" : "array",
+                "description" : "Any instance can be assigned any number of negative classes.",
+                "items" : {
+                  "type" : "object",
+                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                }
+              },
+              "description" : {
+                "type" : "string",
+                "description" : "An optional free text description that can enhance the ontology class based description"
               }
             }
           },
