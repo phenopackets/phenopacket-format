@@ -305,6 +305,7 @@
           },
           "evidence_list" : {
             "type" : "array",
+            "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "any"
             }
@@ -364,6 +365,7 @@
           },
           "evidence_list" : {
             "type" : "array",
+            "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "any"
             }
@@ -409,6 +411,7 @@
           },
           "evidence_list" : {
             "type" : "array",
+            "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "any"
             }
