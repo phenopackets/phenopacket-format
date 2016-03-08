@@ -2,46 +2,59 @@
   "type" : "object",
   "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:packet:Packet",
   "properties" : {
+    "id" : {
+      "type" : "string"
+    },
+    "title" : {
+      "type" : "string"
+    },
     "entities" : {
       "type" : "array",
       "items" : {
         "type" : "object",
         "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity",
         "properties" : {
-          "classList" : {
+          "type" : {
+            "type" : "string",
+            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
+          },
+          "types" : {
             "type" : "array",
+            "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
             "items" : {
               "type" : "object",
               "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass",
               "properties" : {
                 "id" : {
-                  "type" : "string"
+                  "type" : "string",
+                  "description" : "A unique ontology class identifier, can be either URI or CURIE"
                 },
                 "label" : {
-                  "type" : "string"
+                  "type" : "string",
+                  "description" : "A string that contains the preferred natural language term to denote the class"
                 }
               }
             }
           },
-          "negatedClassList" : {
+          "negated_types" : {
             "type" : "array",
+            "description" : "Any instance can be assigned any number of negative classes.",
             "items" : {
               "type" : "object",
               "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
             }
           },
           "description" : {
-            "type" : "string"
+            "type" : "string",
+            "description" : "An optional free text description that can enhance the ontology class based description"
           },
           "id" : {
-            "type" : "string"
+            "type" : "string",
+            "description" : "A unique identifier for the entity, can be either URI or CURIE"
           },
           "label" : {
-            "type" : "string"
-          },
-          "type" : {
             "type" : "string",
-            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
+            "description" : "A string that contains the preferred natural language term to denote the entity"
           }
         }
       }
@@ -52,41 +65,71 @@
         "type" : "object",
         "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:PhenotypeAssociation",
         "properties" : {
-          "evidenceList" : {
-            "type" : "array",
-            "items" : {
-              "type" : "any"
-            }
-          },
           "phenotype" : {
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Phenotype",
             "properties" : {
-              "classList" : {
+              "types" : {
                 "type" : "array",
+                "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                 "items" : {
                   "type" : "object",
                   "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
                 }
               },
-              "negatedClassList" : {
+              "negated_types" : {
                 "type" : "array",
+                "description" : "Any instance can be assigned any number of negative classes.",
                 "items" : {
                   "type" : "object",
                   "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
                 }
               },
               "description" : {
-                "type" : "string"
+                "type" : "string",
+                "description" : "An optional free text description that can enhance the ontology class based description"
               },
-              "timeOfOnset" : {
-                "type" : "string"
+              "onset" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                "properties" : {
+                  "types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "negated_types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be assigned any number of negative classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "description" : {
+                    "type" : "string",
+                    "description" : "An optional free text description that can enhance the ontology class based description"
+                  }
+                }
+              },
+              "offset" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion"
               }
             }
           },
           "entity" : {
             "type" : "object",
             "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity"
+          },
+          "evidence_list" : {
+            "type" : "array",
+            "items" : {
+              "type" : "any"
+            }
           }
         }
       }
@@ -97,41 +140,49 @@
         "type" : "object",
         "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrenceAssociation",
         "properties" : {
-          "evidenceList" : {
-            "type" : "array",
-            "items" : {
-              "type" : "any"
-            }
-          },
           "disease" : {
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrence",
             "properties" : {
-              "classList" : {
+              "types" : {
                 "type" : "array",
+                "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                 "items" : {
                   "type" : "object",
                   "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
                 }
               },
-              "negatedClassList" : {
+              "negated_types" : {
                 "type" : "array",
+                "description" : "Any instance can be assigned any number of negative classes.",
                 "items" : {
                   "type" : "object",
                   "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
                 }
               },
               "description" : {
-                "type" : "string"
+                "type" : "string",
+                "description" : "An optional free text description that can enhance the ontology class based description"
               },
-              "timeOfOnset" : {
-                "type" : "string"
+              "onset" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion"
+              },
+              "offset" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion"
               }
             }
           },
           "entity" : {
             "type" : "object",
             "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity"
+          },
+          "evidence_list" : {
+            "type" : "array",
+            "items" : {
+              "type" : "any"
+            }
           }
         }
       }
