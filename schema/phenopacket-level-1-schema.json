@@ -1,6 +1,6 @@
 {
   "type" : "object",
-  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:packet:Packet",
+  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:PhenoPacket",
   "properties" : {
     "id" : {
       "type" : "string"
@@ -211,6 +211,42 @@
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Phenotype",
             "properties" : {
+              "measurements" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "object",
+                  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Measurement",
+                  "properties" : {
+                    "unit" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    },
+                    "magnitude" : {
+                      "type" : "number"
+                    },
+                    "types" : {
+                      "type" : "array",
+                      "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                      "items" : {
+                        "type" : "object",
+                        "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      }
+                    },
+                    "negated_types" : {
+                      "type" : "array",
+                      "description" : "Any instance can be assigned any number of negative classes.",
+                      "items" : {
+                        "type" : "object",
+                        "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      }
+                    },
+                    "description" : {
+                      "type" : "string",
+                      "description" : "An optional free text description that can enhance the ontology class based description"
+                    }
+                  }
+                }
+              },
               "types" : {
                 "type" : "array",
                 "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
@@ -264,12 +300,10 @@
                 "description" : "the time region in which the condition is first manifest",
                 "properties" : {
                   "startTime" : {
-                    "type" : "integer",
-                    "format" : "UTC_MILLISEC"
+                    "type" : "string"
                   },
                   "endTime" : {
-                    "type" : "integer",
-                    "format" : "UTC_MILLISEC"
+                    "type" : "string"
                   },
                   "types" : {
                     "type" : "array",
@@ -297,6 +331,60 @@
                 "type" : "object",
                 "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition ceases to manifest"
+              },
+              "severity" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/",
+                "properties" : {
+                  "types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "negated_types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be assigned any number of negative classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "description" : {
+                    "type" : "string",
+                    "description" : "An optional free text description that can enhance the ontology class based description"
+                  }
+                }
+              },
+              "environment" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                "description" : "the environment in which the phenotype is expressed",
+                "properties" : {
+                  "types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "negated_types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be assigned any number of negative classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "description" : {
+                    "type" : "string",
+                    "description" : "An optional free text description that can enhance the ontology class based description"
+                  }
+                }
               }
             }
           },
@@ -307,7 +395,43 @@
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
-              "type" : "any"
+              "type" : "object",
+              "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence",
+              "properties" : {
+                "types" : {
+                  "type" : "array",
+                  "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                  "items" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  }
+                },
+                "negated_types" : {
+                  "type" : "array",
+                  "description" : "Any instance can be assigned any number of negative classes.",
+                  "items" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  }
+                },
+                "description" : {
+                  "type" : "string",
+                  "description" : "An optional free text description that can enhance the ontology class based description"
+                },
+                "supporting_entities" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "source" : {
+                  "type" : "array",
+                  "description" : "publications may be represented insider or outside the packet, so a key rather than object is used",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
             }
           }
         }
@@ -323,6 +447,57 @@
             "type" : "object",
             "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrence",
             "properties" : {
+              "stage" : {
+                "type" : "object",
+                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseStage",
+                "properties" : {
+                  "types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "negated_types" : {
+                    "type" : "array",
+                    "description" : "Any instance can be assigned any number of negative classes.",
+                    "items" : {
+                      "type" : "object",
+                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    }
+                  },
+                  "description" : {
+                    "type" : "string",
+                    "description" : "An optional free text description that can enhance the ontology class based description"
+                  },
+                  "has_location" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                    "description" : "the location in an organism or cell in which the phenotype manifests"
+                  },
+                  "onset" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                    "description" : "the time region in which the condition is first manifest"
+                  },
+                  "offset" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                    "description" : "the time region in which the condition ceases to manifest"
+                  },
+                  "severity" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                    "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/"
+                  },
+                  "environment" : {
+                    "type" : "object",
+                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                    "description" : "the environment in which the phenotype is expressed"
+                  }
+                }
+              },
               "types" : {
                 "type" : "array",
                 "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
@@ -357,6 +532,16 @@
                 "type" : "object",
                 "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition ceases to manifest"
+              },
+              "severity" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/"
+              },
+              "environment" : {
+                "type" : "object",
+                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                "description" : "the environment in which the phenotype is expressed"
               }
             }
           },
@@ -367,7 +552,8 @@
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
-              "type" : "any"
+              "type" : "object",
+              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence"
             }
           }
         }
@@ -381,30 +567,8 @@
         "properties" : {
           "environment" : {
             "type" : "object",
-            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
-            "description" : "The environment which this association is about",
-            "properties" : {
-              "types" : {
-                "type" : "array",
-                "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
-                "items" : {
-                  "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-                }
-              },
-              "negated_types" : {
-                "type" : "array",
-                "description" : "Any instance can be assigned any number of negative classes.",
-                "items" : {
-                  "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-                }
-              },
-              "description" : {
-                "type" : "string",
-                "description" : "An optional free text description that can enhance the ontology class based description"
-              }
-            }
+            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+            "description" : "The environment which this association is about"
           },
           "entity" : {
             "type" : "string"
@@ -413,7 +577,8 @@
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
-              "type" : "any"
+              "type" : "object",
+              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence"
             }
           }
         }
