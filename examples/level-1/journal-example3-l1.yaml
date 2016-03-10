@@ -1,0 +1,173 @@
+# De novo pathogenic variants in CHAMP1 are associated with global developmental delay, intellectual
+disability, and dysmorphic facial features (2016). doi: 10.1101/mcs.a000661
+schema: journal-example-level-1
+comment: No PMID ID for this article yet.
+entities:
+  - id: "doi: 10.1101/mcs.a000661#patient1"
+    type: human
+    biological_sex: female
+  - id: "doi: 10.1101/mcs.a000661#patient2"
+    type: human
+    biological_sex: female
+  - id: "doi: 10.1101/mcs.a000661#patient3"
+    type: human
+    biological_sex: female
+  - id: "doi: 10.1101/mcs.a000661#patient4"
+    type: human
+    biological_sex: female
+  - id: "doi: 10.1101/mcs.a000661#patient5"
+    type: human
+    biological_sex: female
+    
+admin_profile:
+  - entity: "doi: 10.1101/mcs.a000661#patient1"
+    property: age
+    value:
+      literal: 23 years
+      type: age
+    source:
+      id: "doi: 10.1101/mcs.a000661"    
+  - entity: "doi: 10.1101/mcs.a000661#patient2"
+    property: age
+    value:
+      literal: 7 years
+      type: age
+    source:
+      id: "doi: 10.1101/mcs.a000661"   
+  - entity: "doi: 10.1101/mcs.a000661#patient3"
+    property: age
+    value:
+      literal: 4 years
+      type: age
+    source:
+      id: "doi: 10.1101/mcs.a000661"    
+  - entity: "doi: 10.1101/mcs.a000661#patient4"
+    property: age
+    value:
+      literal: 12 years
+      type: age
+    source:
+      id: "doi: 10.1101/mcs.a000661"    
+  - entity: "doi: 10.1101/mcs.a000661#patient5"
+    property: age
+    value:
+      literal: 6 years
+      type: age
+    source:
+      id: "doi: 10.1101/mcs.a000661"      
+
+phenotype_profile:
+  - entity: "doi: 10.1101/mcs.a000661#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "doi: 10.1101/mcs.a000661"
+        title: "De novo pathogenic variants in CHAMP1 are associated with global developmental delay, intellectual disability, and dysmorphic facial features"
+    phenotype:
+      type:
+        id: HP:0001252
+        label: Muscular hypotonia
+       onset:
+          type:
+            id: HP:0003593
+            label: 
+        description:   
+     phenotype:
+      type:
+        id: HP:0002478
+        label: Progressive spastic quadriplegia
+       onset:
+          type:
+            id: 
+            label: 
+        description:  
+     phenotype:
+      type:
+        id: HP:0011451
+        label: Congenital microcephaly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth  
+     phenotype:
+      type:
+        id: HP:0001263
+        label: Global developmental delay
+       onset:
+          type:
+            id: 
+            label: 
+        description:   
+     phenotype:
+      type:
+        id: HP:0001344
+        label: Absent speech
+       onset:
+          type:
+            id: 
+            label: 
+        description:                        
+     
+     # Negated phenotype 
+     phenotype:
+      type:
+        not:
+          id: HP:0000504
+          label: Abnormality of vision
+        
+     phenotype:
+      type:
+        id: HP:0008619
+        label: Bilateral sensorineural hearing impairment
+       onset:
+          type:
+            id: 
+            label: 
+        description:         
+     phenotype:
+      type:
+        id: HP:0002079
+        label: Hypoplasia of the corpus callosum      
+       onset:
+          type:
+            id: 
+            label: 
+        description:  
+        
+    # Negated phenotype 
+     phenotype:
+      type:
+        not:
+          id: HP:0001250
+          label:Seizures   
+
+     phenotype:
+      type:
+        id: HP:0100716
+        label: Self-injurious behavior  
+       onset:
+          type:
+            id: 
+            label: 
+        description:  
+ # I made up the genotype bits below.              
+genotype_profile:
+  - entity: "doi: 10.1101/mcs.a000661#patient1"
+    evidence:
+      type: 
+      source:
+        id: "doi: 10.1101/mcs.a000661"
+        title: "De novo pathogenic variants in CHAMP1 are associated with global developmental delay, intellectual disability, and dysmorphic facial features"
+     genotype:
+      type:
+        id: HGNC:20311
+        label: CHAMP1 c.1044delG p.Trp348*
+        
+  # Does the creation of the phenopacket go on whole record or on each entity?                   
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0001-9114-8737
+
+  
+ 

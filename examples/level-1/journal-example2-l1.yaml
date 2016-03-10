@@ -1,0 +1,635 @@
+# Puvabanditsin, S., February, M., Shaik, T., Kashyap, A., Bruno, C., & Mehta, R. (2015). 2q31.1 microdeletion syndrome: case report and literature review. Clinical Case Reports, 3(6), 357–360. http://doi.org/10.1002/ccr3.260
+schema: journal-example-level-1
+comment: 2q31.1 microdeletion syndrome: case report and literature review
+entities:
+  - id: "PMID:26185628#patient1"
+    type: human
+    biological_sex: male
+phenotype_profile:
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0008936
+        label: truncal hypotonia
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001837
+        label: Broad toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001845
+        label: Overlapping toes
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001999
+        label: Abnormal Facial Shape
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0010554
+        label: Cutaneous finger syndactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: OrphaNet:251014
+        label: 2q31.1 microdeletion syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0002079
+        label: Hypoplasia of the corpus callosum
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: ORDO:251014
+        label: 2q31.1 microdeletion syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001182
+        label: tapered finger
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001845
+        label: overlapping toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: UBERON:0007221
+        label: neonate stage
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0000612
+        label: coloboma iris
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0000589
+        label: ocular colobomas
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0002814
+        label: involvement leg
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0040064
+        label: abnormality limbs
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0002813
+        label: limb disorder
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001838
+        label: congenital vertical talus
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0012385
+        label: camptodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0030084
+        label: clinodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0000252
+        label: microcephaly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001518
+        label: low birth weight
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0007759
+        label: corneal stromal opacity
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001199
+        label: triphalangy thumb
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001631
+        label: disorder atrial septum
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001671
+        label: finding cardiac septa
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0010066
+        label: duplicated hallux
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0010055
+        label: broad great toe
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0011304
+        label: broad thumb
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001159
+        label: syndactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001156
+        label: brachydactyly syndrome
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001166
+        label: arachnodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0100257
+        label: ectrodactyly
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001171
+        label: ectrodactyly hand
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001792
+        label: hypoplastic nails
+       onset:
+          type:
+            id: HP:0003593
+            label: Infantile onset
+        description: Observed at birth
+      created: 2016-02-09
+      contributors:
+        - id: ORCID:0000-0002-9353-5498
+  - entity: "PMID:26185628#patient1"
+    evidence:
+      type: TAS # Traceable author statement
+      source:
+        id: "PMID:26185628"
+        title: 2q31.1 microdeletion syndrome: case report and literature review
+    phenotype:
+      type:
+        id: HP:0001155
+        label: abnormality hand
+variants:
+  - id: _:v1 
+   positions:
+    type: 
+     ICSN value: "46,XX,del(2)(q31.1;q33.1)"

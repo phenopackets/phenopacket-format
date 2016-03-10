@@ -10,6 +10,8 @@ limited to:
  * variants or collections of variants
  * any of the above in non-human context
 
+Note this context must be explicit. For example, phenotypes that are mentioned in the "background" section of a journal article should not be included in the phenopacket unless they are *also* phenotypes observed in the patients/organism/gene under study. Otherwise, the algorithms used to analyze the phenopackets could infer nonsense associations.
+
 ## Levels
 
 Because different levels of precision are required for different
