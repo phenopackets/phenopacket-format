@@ -7,5 +7,10 @@ The health of an individual organism results from a complex interplay between it
 
 See the [Wiki](https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started) for documentation
 
+## TODO
 
+See the issue tracker for a complete list. Some of the main issues of relevance:
+
+ * [#54](https://github.com/phenopackets/phenopacket-format/issues/54) - the examples in this repo may be out of date
+ * [#55](https://github.com/phenopackets/phenopacket-format/issues/55) - JSON-schema is overly complex
 
