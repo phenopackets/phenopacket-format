@@ -1,34 +1,39 @@
 {
-    "comment": "This is an example phenopacket containing one disease and two associations",
+    "ontologies": [
+        {
+            "id": "hp",
+            "version": "2016-02-01"
+        }
+    ],
     "phenotype_profile": [
         {
+            "evidence": {
+                "type": "TAS",
+                "source": {
+                    "id": "PMID:23455423",
+                    "title": "Mutations in prion-like domains in hnRNPA2B1 and hnRNPA1 cause multisystem proteinopathy and ALS"
+                }
+            },
+            "created": "!!date 2016 1 14",
             "phenotype": {
                 "type": {
                     "label": "Muscular dystrophy",
                     "id": "HP:0003560"
                 },
-                "description": "blah blah",
                 "onset": {
                     "type": {
                         "label": "Late onset",
                         "id": "HP:0003584"
                     }
-                }
+                },
+                "description": "blah blah"
             },
+            "entity": "OMIM:615426",
             "contributors": [
                 {
                     "id": "ORCID:nnnn-nnnn-nnnn"
                 }
-            ],
-            "entity": "OMIM:615426",
-            "created": "!!date 2016 1 14",
-            "evidence": {
-                "source": {
-                    "id": "PMID:23455423",
-                    "title": "Mutations in prion-like domains in hnRNPA2B1 and hnRNPA1 cause multisystem proteinopathy and ALS"
-                },
-                "type": "TAS"
-            }
+            ]
         },
         {
             "phenotype": {
@@ -37,35 +42,30 @@
                     "id": "HP:0007354"
                 }
             },
-            "comment": "Disease name contained:amyotrophic lateral sclerosis 20",
             "entity": "OMIM:615426",
+            "evidence": {
+                "type": "IEA",
+                "source": {
+                    "id": "OMIM:615426"
+                }
+            },
             "created": "!!date 2016 1 14",
+            "comment": "Disease name contained:amyotrophic lateral sclerosis 20",
             "contributors": [
                 {
                     "id": "ORCID:nnnn-nnnn-nnnn"
                 }
-            ],
-            "evidence": {
-                "source": {
-                    "id": "OMIM:615426"
-                },
-                "type": "IEA"
-            }
+            ]
         }
     ],
     "schema": "phenopacket-level-1",
-    "@context": "http://phenopacket.github.io/context/context.jsonld",
-    "ontologies": [
-        {
-            "version": "2016-02-01",
-            "id": "hp"
-        }
-    ],
     "entities": [
         {
+            "type": "disease",
             "id": "OMIM:615426",
-            "label": "amyotrophic lateral sclerosis type 20",
-            "type": "disease"
+            "label": "amyotrophic lateral sclerosis type 20"
         }
-    ]
+    ],
+    "comment": "This is an example phenopacket containing one disease and two associations",
+    "@context": "http://phenopacket.github.io/context/context.jsonld"
 }

@@ -1,0 +1,71 @@
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:org:phenopackets:api:model:association:Association",
+  "properties" : {
+    "entity" : {
+      "type" : "string"
+    },
+    "evidence" : {
+      "type" : "array",
+      "description" : "Any Association can have any number of pieces of evidence attached",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:meta:Evidence",
+        "properties" : {
+          "types" : {
+            "type" : "array",
+            "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+            "items" : {
+              "type" : "object",
+              "id" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+              "properties" : {
+                "id" : {
+                  "type" : "string",
+                  "description" : "A unique ontology class identifier, can be either URI or CURIE"
+                },
+                "label" : {
+                  "type" : "string",
+                  "description" : "A string that contains the preferred natural language term to denote the class"
+                }
+              }
+            }
+          },
+          "negated_types" : {
+            "type" : "array",
+            "description" : "Any instance can be assigned any number of negative classes.",
+            "items" : {
+              "type" : "object",
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+            }
+          },
+          "description" : {
+            "type" : "string",
+            "description" : "An optional free text description that can enhance the ontology class based description"
+          },
+          "supporting_entities" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "source" : {
+            "type" : "array",
+            "description" : "publications may be represented inside or outside the packet, so a key rather than object is used",
+            "items" : {
+              "type" : "object",
+              "id" : "urn:jsonschema:org:phenopackets:api:model:meta:Publication",
+              "properties" : {
+                "title" : {
+                  "type" : "string"
+                },
+                "id" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

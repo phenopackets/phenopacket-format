@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+  "properties" : {
+    "id" : {
+      "type" : "string",
+      "description" : "A unique ontology class identifier, can be either URI or CURIE"
+    },
+    "label" : {
+      "type" : "string",
+      "description" : "A string that contains the preferred natural language term to denote the class"
+    }
+  }
+}

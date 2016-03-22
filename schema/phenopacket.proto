@@ -1,0 +1,154 @@
+// org.phenopackets.api.PhenoPacket
+
+// Message for org.phenopackets.api.PhenoPacket
+message PhenoPacket {
+  optional string id = 1;
+  optional string title = 2;
+  repeated Entity entities = 3;
+  repeated Variant variants = 4;
+  repeated Person persons = 5;
+  repeated Organism organisms = 6;
+  repeated PhenotypeAssociation phenotype_profile = 7;
+  repeated DiseaseOccurrenceAssociation diagnosis_profile = 8;
+  repeated EnvironmentAssociation environment_profile = 9;
+}
+// Message for org.phenopackets.api.model.environment.Environment
+message Environment {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.phenopackets.api.model.condition.TemporalRegion
+message TemporalRegion {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional string start_time = 4;
+  optional string end_time = 5;
+}
+// Message for org.phenopackets.api.model.association.PhenotypeAssociation
+message PhenotypeAssociation {
+  optional string entity = 1;
+  optional Phenotype phenotype = 2;
+  repeated Evidence evidence = 3;
+}
+// Message for org.phenopackets.api.model.meta.Evidence
+message Evidence {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  repeated string supporting_entities = 4;
+  repeated Publication source = 5;
+}
+// Message for org.phenopackets.api.model.entity.Variant
+message Variant {
+  optional string descriptionHGVS = 1;
+  optional string id = 2;
+  optional string label = 3;
+}
+// Message for org.phenopackets.api.model.entity.Person
+message Person {
+  optional OntologyClass strain = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional string id = 5;
+  optional string label = 6;
+  optional OntologyClass taxon = 7;
+  optional string sex = 8;
+  optional string date_of_birth = 9;
+}
+// Message for org.phenopackets.api.model.condition.ConditionSeverity
+message ConditionSeverity {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.phenopackets.api.model.entity.Entity
+message Entity {
+  optional string id = 1;
+  optional string label = 2;
+}
+// Message for org.phenopackets.api.model.condition.OrganismalSite
+message OrganismalSite {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.phenopackets.api.model.association.EnvironmentAssociation
+message EnvironmentAssociation {
+  optional Environment environment = 1;
+  optional string entity = 2;
+  repeated Evidence evidence = 3;
+}
+// Message for org.phenopackets.api.model.ontology.OntologyClass
+message OntologyClass {
+  optional string id = 1;
+  optional string label = 2;
+}
+// Message for org.phenopackets.api.model.condition.Measurement
+message Measurement {
+  optional OntologyClass unit = 1;
+  optional double magnitude = 2;
+  repeated OntologyClass types = 3;
+  repeated OntologyClass negated_types = 4;
+  optional string description = 5;
+}
+// Message for org.phenopackets.api.model.condition.DiseaseOccurrence
+message DiseaseOccurrence {
+  optional DiseaseStage stage = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional OrganismalSite has_location = 5;
+  optional TemporalRegion onset = 6;
+  optional TemporalRegion offset = 7;
+  optional ConditionSeverity severity = 8;
+  optional Environment environment = 9;
+}
+// Message for org.phenopackets.api.model.association.DiseaseOccurrenceAssociation
+message DiseaseOccurrenceAssociation {
+  optional DiseaseOccurrence diseaseOcurrence = 1;
+  optional string entity = 2;
+  repeated Evidence evidence = 3;
+}
+// Message for org.phenopackets.api.model.condition.DiseaseStage
+message DiseaseStage {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional OrganismalSite has_location = 4;
+  optional TemporalRegion onset = 5;
+  optional TemporalRegion offset = 6;
+  optional ConditionSeverity severity = 7;
+  optional Environment environment = 8;
+}
+// Message for org.phenopackets.api.model.entity.Organism
+message Organism {
+  optional OntologyClass strain = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional string id = 5;
+  optional string label = 6;
+  optional OntologyClass taxon = 7;
+  optional string sex = 8;
+  optional string date_of_birth = 9;
+}
+// Message for org.phenopackets.api.model.condition.Phenotype
+message Phenotype {
+  repeated Measurement measurements = 1;
+  repeated OntologyClass types = 2;
+  repeated OntologyClass negated_types = 3;
+  optional string description = 4;
+  optional OrganismalSite has_location = 5;
+  optional TemporalRegion onset = 6;
+  optional TemporalRegion offset = 7;
+  optional ConditionSeverity severity = 8;
+  optional Environment environment = 9;
+}
+// Message for org.phenopackets.api.model.meta.Publication
+message Publication {
+  optional string title = 1;
+  optional string id = 2;
+}

@@ -1,0 +1,157 @@
+{
+  "type" : "object",
+  "id" : "urn:jsonschema:org:phenopackets:api:model:condition:Condition",
+  "properties" : {
+    "types" : {
+      "type" : "array",
+      "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+        "properties" : {
+          "id" : {
+            "type" : "string",
+            "description" : "A unique ontology class identifier, can be either URI or CURIE"
+          },
+          "label" : {
+            "type" : "string",
+            "description" : "A string that contains the preferred natural language term to denote the class"
+          }
+        }
+      }
+    },
+    "negated_types" : {
+      "type" : "array",
+      "description" : "Any instance can be assigned any number of negative classes.",
+      "items" : {
+        "type" : "object",
+        "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+      }
+    },
+    "description" : {
+      "type" : "string",
+      "description" : "An optional free text description that can enhance the ontology class based description"
+    },
+    "has_location" : {
+      "type" : "object",
+      "id" : "urn:jsonschema:org:phenopackets:api:model:condition:OrganismalSite",
+      "description" : "the location in an organism or cell in which the phenotype manifests",
+      "properties" : {
+        "types" : {
+          "type" : "array",
+          "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "negated_types" : {
+          "type" : "array",
+          "description" : "Any instance can be assigned any number of negative classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "An optional free text description that can enhance the ontology class based description"
+        }
+      }
+    },
+    "onset" : {
+      "type" : "object",
+      "id" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
+      "description" : "the time region in which the condition is first manifest",
+      "properties" : {
+        "types" : {
+          "type" : "array",
+          "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "negated_types" : {
+          "type" : "array",
+          "description" : "Any instance can be assigned any number of negative classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "An optional free text description that can enhance the ontology class based description"
+        },
+        "start_time" : {
+          "type" : "string",
+          "description" : "the date or time at which the interval starts"
+        },
+        "end_time" : {
+          "type" : "string",
+          "description" : "the date or time at which the interval ends"
+        }
+      }
+    },
+    "offset" : {
+      "type" : "object",
+      "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
+      "description" : "the time region in which the condition ceases to manifest"
+    },
+    "severity" : {
+      "type" : "object",
+      "id" : "urn:jsonschema:org:phenopackets:api:model:condition:ConditionSeverity",
+      "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/",
+      "properties" : {
+        "types" : {
+          "type" : "array",
+          "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "negated_types" : {
+          "type" : "array",
+          "description" : "Any instance can be assigned any number of negative classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "An optional free text description that can enhance the ontology class based description"
+        }
+      }
+    },
+    "environment" : {
+      "type" : "object",
+      "id" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
+      "description" : "the environment in which the phenotype is expressed",
+      "properties" : {
+        "types" : {
+          "type" : "array",
+          "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "negated_types" : {
+          "type" : "array",
+          "description" : "Any instance can be assigned any number of negative classes.",
+          "items" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
+          }
+        },
+        "description" : {
+          "type" : "string",
+          "description" : "An optional free text description that can enhance the ontology class based description"
+        }
+      }
+    }
+  }
+}

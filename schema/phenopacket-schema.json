@@ -1,6 +1,6 @@
 {
   "type" : "object",
-  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:PhenoPacket",
+  "id" : "urn:jsonschema:org:phenopackets:api:PhenoPacket",
   "properties" : {
     "id" : {
       "type" : "string"
@@ -12,42 +12,8 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Entity",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:entity:Entity",
         "properties" : {
-          "type" : {
-            "type" : "string",
-            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
-          },
-          "types" : {
-            "type" : "array",
-            "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
-            "items" : {
-              "type" : "object",
-              "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass",
-              "properties" : {
-                "id" : {
-                  "type" : "string",
-                  "description" : "A unique ontology class identifier, can be either URI or CURIE"
-                },
-                "label" : {
-                  "type" : "string",
-                  "description" : "A string that contains the preferred natural language term to denote the class"
-                }
-              }
-            }
-          },
-          "negated_types" : {
-            "type" : "array",
-            "description" : "Any instance can be assigned any number of negative classes.",
-            "items" : {
-              "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-            }
-          },
-          "description" : {
-            "type" : "string",
-            "description" : "An optional free text description that can enhance the ontology class based description"
-          },
           "id" : {
             "type" : "string",
             "description" : "A unique identifier for the entity, can be either URI or CURIE"
@@ -63,34 +29,10 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:genome:Variant",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:entity:Variant",
         "properties" : {
-          "type" : {
-            "type" : "string",
-            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
-          },
           "descriptionHGVS" : {
             "type" : "string"
-          },
-          "types" : {
-            "type" : "array",
-            "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
-            "items" : {
-              "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-            }
-          },
-          "negated_types" : {
-            "type" : "array",
-            "description" : "Any instance can be assigned any number of negative classes.",
-            "items" : {
-              "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-            }
-          },
-          "description" : {
-            "type" : "string",
-            "description" : "An optional free text description that can enhance the ontology class based description"
           },
           "id" : {
             "type" : "string",
@@ -107,26 +49,28 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:organism:Person",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:entity:Person",
         "properties" : {
-          "type" : {
-            "type" : "string",
-            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
-          },
-          "taxon" : {
-            "type" : "object",
-            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-          },
           "strain" : {
             "type" : "object",
-            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+            "id" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+            "properties" : {
+              "id" : {
+                "type" : "string",
+                "description" : "A unique ontology class identifier, can be either URI or CURIE"
+              },
+              "label" : {
+                "type" : "string",
+                "description" : "A string that contains the preferred natural language term to denote the class"
+              }
+            }
           },
           "types" : {
             "type" : "array",
             "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
             }
           },
           "negated_types" : {
@@ -134,7 +78,7 @@
             "description" : "Any instance can be assigned any number of negative classes.",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
             }
           },
           "description" : {
@@ -148,6 +92,18 @@
           "label" : {
             "type" : "string",
             "description" : "A string that contains the preferred natural language term to denote the entity"
+          },
+          "taxon" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+            "description" : "points to an instance of the taxon to which this belongs"
+          },
+          "sex" : {
+            "type" : "string",
+            "description" : "code for the biological sex of the organism. Mappings from codes are in JSON-LD context"
+          },
+          "date_of_birth" : {
+            "type" : "string"
           }
         }
       }
@@ -156,26 +112,18 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:organism:Organism",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:entity:Organism",
         "properties" : {
-          "type" : {
-            "type" : "string",
-            "enum" : [ "disease", "organism", "patient", "variant", "genotype" ]
-          },
-          "taxon" : {
-            "type" : "object",
-            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
-          },
           "strain" : {
             "type" : "object",
-            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
           },
           "types" : {
             "type" : "array",
             "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
             }
           },
           "negated_types" : {
@@ -183,7 +131,7 @@
             "description" : "Any instance can be assigned any number of negative classes.",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
             }
           },
           "description" : {
@@ -197,6 +145,18 @@
           "label" : {
             "type" : "string",
             "description" : "A string that contains the preferred natural language term to denote the entity"
+          },
+          "taxon" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass",
+            "description" : "points to an instance of the taxon to which this belongs"
+          },
+          "sex" : {
+            "type" : "string",
+            "description" : "code for the biological sex of the organism. Mappings from codes are in JSON-LD context"
+          },
+          "date_of_birth" : {
+            "type" : "string"
           }
         }
       }
@@ -205,21 +165,24 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:PhenotypeAssociation",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:association:PhenotypeAssociation",
         "properties" : {
+          "entity" : {
+            "type" : "string"
+          },
           "phenotype" : {
             "type" : "object",
-            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Phenotype",
+            "id" : "urn:jsonschema:org:phenopackets:api:model:condition:Phenotype",
             "properties" : {
               "measurements" : {
                 "type" : "array",
                 "items" : {
                   "type" : "object",
-                  "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:Measurement",
+                  "id" : "urn:jsonschema:org:phenopackets:api:model:condition:Measurement",
                   "properties" : {
                     "unit" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     },
                     "magnitude" : {
                       "type" : "number"
@@ -229,7 +192,7 @@
                       "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                       "items" : {
                         "type" : "object",
-                        "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                        "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                       }
                     },
                     "negated_types" : {
@@ -237,7 +200,7 @@
                       "description" : "Any instance can be assigned any number of negative classes.",
                       "items" : {
                         "type" : "object",
-                        "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                        "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                       }
                     },
                     "description" : {
@@ -252,7 +215,7 @@
                 "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                 "items" : {
                   "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                 }
               },
               "negated_types" : {
@@ -260,7 +223,7 @@
                 "description" : "Any instance can be assigned any number of negative classes.",
                 "items" : {
                   "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                 }
               },
               "description" : {
@@ -269,7 +232,7 @@
               },
               "has_location" : {
                 "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                "id" : "urn:jsonschema:org:phenopackets:api:model:condition:OrganismalSite",
                 "description" : "the location in an organism or cell in which the phenotype manifests",
                 "properties" : {
                   "types" : {
@@ -277,7 +240,7 @@
                     "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "negated_types" : {
@@ -285,7 +248,7 @@
                     "description" : "Any instance can be assigned any number of negative classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "description" : {
@@ -296,21 +259,15 @@
               },
               "onset" : {
                 "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                "id" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition is first manifest",
                 "properties" : {
-                  "startTime" : {
-                    "type" : "string"
-                  },
-                  "endTime" : {
-                    "type" : "string"
-                  },
                   "types" : {
                     "type" : "array",
                     "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "negated_types" : {
@@ -318,23 +275,31 @@
                     "description" : "Any instance can be assigned any number of negative classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "description" : {
                     "type" : "string",
                     "description" : "An optional free text description that can enhance the ontology class based description"
+                  },
+                  "start_time" : {
+                    "type" : "string",
+                    "description" : "the date or time at which the interval starts"
+                  },
+                  "end_time" : {
+                    "type" : "string",
+                    "description" : "the date or time at which the interval ends"
                   }
                 }
               },
               "offset" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition ceases to manifest"
               },
               "severity" : {
                 "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                "id" : "urn:jsonschema:org:phenopackets:api:model:condition:ConditionSeverity",
                 "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/",
                 "properties" : {
                   "types" : {
@@ -342,7 +307,7 @@
                     "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "negated_types" : {
@@ -350,7 +315,7 @@
                     "description" : "Any instance can be assigned any number of negative classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "description" : {
@@ -361,7 +326,7 @@
               },
               "environment" : {
                 "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                "id" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
                 "description" : "the environment in which the phenotype is expressed",
                 "properties" : {
                   "types" : {
@@ -369,7 +334,7 @@
                     "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "negated_types" : {
@@ -377,7 +342,7 @@
                     "description" : "Any instance can be assigned any number of negative classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "description" : {
@@ -388,22 +353,19 @@
               }
             }
           },
-          "entity" : {
-            "type" : "string"
-          },
-          "evidence_list" : {
+          "evidence" : {
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "object",
-              "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence",
+              "id" : "urn:jsonschema:org:phenopackets:api:model:meta:Evidence",
               "properties" : {
                 "types" : {
                   "type" : "array",
                   "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                   "items" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                   }
                 },
                 "negated_types" : {
@@ -411,7 +373,7 @@
                   "description" : "Any instance can be assigned any number of negative classes.",
                   "items" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                   }
                 },
                 "description" : {
@@ -426,9 +388,18 @@
                 },
                 "source" : {
                   "type" : "array",
-                  "description" : "publications may be represented insider or outside the packet, so a key rather than object is used",
+                  "description" : "publications may be represented inside or outside the packet, so a key rather than object is used",
                   "items" : {
-                    "type" : "string"
+                    "type" : "object",
+                    "id" : "urn:jsonschema:org:phenopackets:api:model:meta:Publication",
+                    "properties" : {
+                      "title" : {
+                        "type" : "string"
+                      },
+                      "id" : {
+                        "type" : "string"
+                      }
+                    }
                   }
                 }
               }
@@ -441,22 +412,22 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrenceAssociation",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:association:DiseaseOccurrenceAssociation",
         "properties" : {
-          "disease" : {
+          "diseaseOcurrence" : {
             "type" : "object",
-            "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseOccurrence",
+            "id" : "urn:jsonschema:org:phenopackets:api:model:condition:DiseaseOccurrence",
             "properties" : {
               "stage" : {
                 "type" : "object",
-                "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:DiseaseStage",
+                "id" : "urn:jsonschema:org:phenopackets:api:model:condition:DiseaseStage",
                 "properties" : {
                   "types" : {
                     "type" : "array",
                     "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "negated_types" : {
@@ -464,7 +435,7 @@
                     "description" : "Any instance can be assigned any number of negative classes.",
                     "items" : {
                       "type" : "object",
-                      "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                      "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                     }
                   },
                   "description" : {
@@ -473,27 +444,27 @@
                   },
                   "has_location" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:OrganismalSite",
                     "description" : "the location in an organism or cell in which the phenotype manifests"
                   },
                   "onset" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                     "description" : "the time region in which the condition is first manifest"
                   },
                   "offset" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                     "description" : "the time region in which the condition ceases to manifest"
                   },
                   "severity" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:ConditionSeverity",
                     "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/"
                   },
                   "environment" : {
                     "type" : "object",
-                    "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                    "$ref" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
                     "description" : "the environment in which the phenotype is expressed"
                   }
                 }
@@ -503,7 +474,7 @@
                 "description" : "Any instance can be positively described as the intersection of any number of ontology classes.",
                 "items" : {
                   "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                 }
               },
               "negated_types" : {
@@ -511,7 +482,7 @@
                 "description" : "Any instance can be assigned any number of negative classes.",
                 "items" : {
                   "type" : "object",
-                  "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:ontology:OntologyClass"
+                  "$ref" : "urn:jsonschema:org:phenopackets:api:model:ontology:OntologyClass"
                 }
               },
               "description" : {
@@ -520,27 +491,27 @@
               },
               "has_location" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:OrganismalSite",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:OrganismalSite",
                 "description" : "the location in an organism or cell in which the phenotype manifests"
               },
               "onset" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition is first manifest"
               },
               "offset" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:TemporalRegion",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:TemporalRegion",
                 "description" : "the time region in which the condition ceases to manifest"
               },
               "severity" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:condition:ConditionSeverity",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:condition:ConditionSeverity",
                 "description" : "the degree to which the phenotype is manifest, related to the concept of expressivity, see http://www.ncbi.nlm.nih.gov/books/NBK22090/"
               },
               "environment" : {
                 "type" : "object",
-                "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+                "$ref" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
                 "description" : "the environment in which the phenotype is expressed"
               }
             }
@@ -548,12 +519,12 @@
           "entity" : {
             "type" : "string"
           },
-          "evidence_list" : {
+          "evidence" : {
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:meta:Evidence"
             }
           }
         }
@@ -563,22 +534,22 @@
       "type" : "array",
       "items" : {
         "type" : "object",
-        "id" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:EnvironmentAssociation",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:association:EnvironmentAssociation",
         "properties" : {
           "environment" : {
             "type" : "object",
-            "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:environment:Environment",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
             "description" : "The environment which this association is about"
           },
           "entity" : {
             "type" : "string"
           },
-          "evidence_list" : {
+          "evidence" : {
             "type" : "array",
             "description" : "Any Association can have any number of pieces of evidence attached",
             "items" : {
               "type" : "object",
-              "$ref" : "urn:jsonschema:org:monarchinitiative:ppk:model:meta:Evidence"
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:meta:Evidence"
             }
           }
         }

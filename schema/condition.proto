@@ -1,0 +1,44 @@
+// org.phenopackets.api.model.condition.Condition
+
+// Message for org.phenopackets.api.model.condition.Condition
+message Condition {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional OrganismalSite has_location = 4;
+  optional TemporalRegion onset = 5;
+  optional TemporalRegion offset = 6;
+  optional ConditionSeverity severity = 7;
+  optional Environment environment = 8;
+}
+// Message for org.phenopackets.api.model.condition.OrganismalSite
+message OrganismalSite {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.phenopackets.api.model.environment.Environment
+message Environment {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
+// Message for org.phenopackets.api.model.condition.TemporalRegion
+message TemporalRegion {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+  optional string start_time = 4;
+  optional string end_time = 5;
+}
+// Message for org.phenopackets.api.model.ontology.OntologyClass
+message OntologyClass {
+  optional string id = 1;
+  optional string label = 2;
+}
+// Message for org.phenopackets.api.model.condition.ConditionSeverity
+message ConditionSeverity {
+  repeated OntologyClass types = 1;
+  repeated OntologyClass negated_types = 2;
+  optional string description = 3;
+}
