@@ -1,5 +1,6 @@
-language: ruby
-rvm: "1.9.3"
+language: python
+python:
+  - "3.4"
 
 before_script:
   - mkdir -p bin
@@ -9,15 +10,9 @@ before_script:
   - wget http://build.berkeleybop.org/userContent/owltools/owltools-runner-all.jar -O bin/owltools-runner-all.jar
   - wget http://build.berkeleybop.org/userContent/owltools/owltools-oort-all.jar -O bin/owltools-oort-all.jar
   - chmod +x bin/*
-
-install:
-  - gem install kwalify
   
 # command to run tests
 script: make test
-
-#after_success:
-#  coveralls
 
 # whitelist
 branches:
