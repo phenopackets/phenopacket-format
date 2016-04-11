@@ -1,2 +1,2 @@
 #!/bin/sh
-python ./json_validation_test.py
+python ./test/json_validation_test.py
