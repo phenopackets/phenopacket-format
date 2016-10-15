@@ -10,6 +10,8 @@ html,
 body {
     width: 100%;
     height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 body {
@@ -37,18 +39,15 @@ div.carousel-inner > div.item > img {
 }
 
 body {
-/*
-  background-image: url("pattern.png");
-  background-repeat: repeat;
-  background-size: 40px 40px;
-*/
-  background-color: aliceblue;
+  xbackground-color: red;
 }
 
 div.markdown {
+  margin: 0;
   padding: 5px 10px;
   background: white;
   color: black;
+  font-size: 1.1em;
 }
 
 .markdown img {
@@ -74,7 +73,7 @@ ul.list-narrow {
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 4.0em;
     font-weight: 700;
 }
 
@@ -209,22 +208,61 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-/* About */
-
-.about {
-    padding: 50px 0;
+    margin: 0;
 }
 
 /* Services */
 
 .services {
-    padding: 50px 0;
+  width: 100%;
+  display: table;
+  padding: 20px 0;
+}
+
+.services > .container {
+  padding: 0;
+}
+
+.services > .container .row.row-inset {
+  padding: 0 10px;
 }
 
 .service-item {
     margin-bottom: 30px;
+}
+
+
+
+
+.services p {
+  font-weight: 500;
+}
+
+
+.services.bg-primary {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+
+.services.bg-secondary {
+  background-color: aliceblue;
+}
+
+
+.services.bg-primary a {
+  color: #fff;
+}
+
+.services.bg-primary a:hover,
+.services.bg-primary a:focus
+{
+  color: lightblue;
+}
+
+.services.bg-secondary .fa-stack {
+  color: white;
+  background-color: aliceblue;
 }
 
 /* Callout */

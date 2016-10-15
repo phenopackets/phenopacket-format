@@ -12,7 +12,8 @@
     http-equiv="X-UA-Compatible" content="IE=edge">
   <meta
     name="viewport"
-    content="user-scalable=no,width=device-width,initial-scale=1">
+    content="minimum-scale=1.001,maximum-scale=1.001,user-scalable=no,initial-scale=1.001">
+
   <meta
     name="apple-mobile-web-app-capable"
     content="yes">
@@ -121,70 +122,68 @@
 
 
 <body>
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand">
-          <a href="#top" onclick=$("#menu-close").click();>
-            <span>
-            <img src="site/PhenoPackets_Logo.png" style="height:50px;">
-            </span>
-            PhenoPackets
-          </a>
-        </li>
-        <li>
-          <a href="#top" onclick=$("#menu-close").click();>Home</a>
-        </li>
-        <li>
-          <a href="#phenopackets-are" onclick=$("#menu-close").click();>About PhenoPackets</a>
-          <ul>
-            <li>
-              <a href="#an-idea" onclick=$("#menu-close").click();>The Idea</a>
-            </li>
-            <li>
-              <a href="#a-technology" onclick=$("#menu-close").click();>The Technology</a>
-            </li>
-            <li>
-              <a href="#a-community" onclick=$("#menu-close").click();>The Community</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#documentation" onclick=$("#menu-close").click();>Documentation</a>
-        </li>
-        <li>
-          <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
-        </li>
-      </ul>
-    </nav>
-
-
-    <header id="top" class="header">
-      <div class="text-vertical-center">
-        <img src="site/PhenoPackets_Logo.png" style="margin-top:0;">
-        <br>
-        <br>
-        <br>
-        <h1>PhenoPackets</h1>
-        <h3><b>Open and Computable Bioinformation</b></h3>
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="#phenopackets-are" class="btn btn-dark btn-lg">
-          Learn More
+  <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+      <li class="sidebar-brand">
+        <a href="#top" onclick=$("#menu-close").click();>
+          <span>
+          <img src="site/PhenoPackets_Logo.png" style="height:50px;">
+          </span>
+          PhenoPackets
         </a>
-      </div>
-    </header>
+      </li>
+      <li>
+        <a href="#top" onclick=$("#menu-close").click();>Home</a>
+      </li>
+      <li>
+        <a href="#phenopackets-are" onclick=$("#menu-close").click();>About PhenoPackets</a>
+        <ul>
+          <li>
+            <a href="#an-idea" onclick=$("#menu-close").click();>The Idea</a>
+          </li>
+          <li>
+            <a href="#a-technology" onclick=$("#menu-close").click();>The Technology</a>
+          </li>
+          <li>
+            <a href="#a-community" onclick=$("#menu-close").click();>The Community</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#documentation" onclick=$("#menu-close").click();>Documentation</a>
+      </li>
+      <li>
+        <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+      </li>
+    </ul>
+  </nav>
 
+  <header id="top" class="header">
+    <div class="text-vertical-center">
+      <img src="site/PhenoPackets_Logo.png" style="margin-top:0;">
+      <br>
+      <br>
+      <br>
+      <h1>PhenoPackets</h1>
+      <h3><b>Open and Computable Bioinformation</b></h3>
+      <br>
+      <br>
+      <br>
+      <br>
+      <a href="#phenopackets-are" class="btn btn-dark btn-lg">
+        Learn More
+      </a>
+    </div>
+  </header>
 
     <!-- About -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="phenopackets-are" class="about bg-primary">
+    <section id="phenopackets-are" class="services bg-primary">
       <div class="container">
-        <div class="row text-center">
-          <div class="col-lg-10 col-lg-offset-1">
+        <div class="row row-inset">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
             <h2>PhenoPackets Are …</h2>
             <hr class="small">
             <div class="row">
@@ -245,11 +244,11 @@
       </div>
     </section>
 
-    <section id="an-idea" class="about bg-secondary">
+    <section id="an-idea" class="services bg-secondary">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <span class="fa-stack fa-4x bg-primary">
+        <div class="row row-inset">
+          <div class="col-xs-12 text-center">
+            <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
             </span>
@@ -260,7 +259,7 @@
             <p class="lead">
               A language-neutral data format specification and several language-specific implementations and tools.
             </p>
-            <a href="#an-idea-detailed" class="btn btn-light"
+            <a href="#an-idea-detailed" class="btn btn-dark"
               onclick=$("#an-idea-detailed").toggleClass('hidden');>
               Details
             </a>
@@ -277,27 +276,73 @@
     </section>
 
 
-    <section id="a-technology" class="about bg-primary">
+    <section id="a-technology" class="services bg-primary">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
+        <div class="row row-inset">
+          <div class="col-xs-12 text-center">
             <span class="fa-stack fa-4x bg-primary">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-cogs fa-stack-1x text-primary"></i>
             </span>
             <h3>The Technology of PhenoPackets</h3>
             <p class="lead">
-              An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
+              There are currently encodings of PhenoPackets specified for YAML and JSON, as well
+              several implementations in various languages such as Java, JavaScript, and Python.
             </p>
+          </div>
+          <div class="col-xs-12">
             <p class="lead">
-              A language-neutral data format specification and several language-specific implementations and tools.
+              Source code and examples of PhenoPackets technology may be found in the following GitHub repositories:
             </p>
+          </div>
+          <div class="col-xs-offset-1 col-xs-11">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/phenopackets" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Organization
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Format
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Wiki
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Java Reference Implementation
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Python Tools
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/pxftools" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Java Tools
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <a href="#a-technology-detailed" class="btn btn-light"
+          <div class="text-center">
+            <a href="#a-technology-detailed" class="btn btn-dark"
               onclick=$("#a-technology-detailed").toggleClass('hidden');>
               Details
             </a>
           </div>
+
         </div>
 
         <div class="row hidden" id="a-technology-detailed">
@@ -311,11 +356,11 @@
     </section>
 
 
-    <section id="a-community" class="about bg-secondary">
+    <section id="a-community" class="services bg-secondary">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <span class="fa-stack fa-4x bg-primary">
+        <div class="row row-inset">
+          <div class="col-xs-12 text-center">
+            <span class="fa-stack fa-4x xbg-primary">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-user-md fa-stack-1x text-primary"></i>
             </span>
@@ -381,7 +426,7 @@
             </div>
 
 
-            <a href="#a-community-detailed" class="btn btn-light"
+            <a href="#a-community-detailed" class="btn btn-dark"
               onclick=$("#a-community-detailed").toggleClass('hidden');>
               Details
             </a>
@@ -400,21 +445,64 @@
 
 
 
-    <section id="documentation" class="about bg-primary">
+    <section id="documentation" class="services bg-primary">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
+        <div class="row row-inset">
+          <div class="col-xs-12 text-center">
             <span class="fa-stack fa-4x bg-primary">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-user-md fa-stack-1x text-primary"></i>
             </span>
             <h3>Documentation and References</h3>
+          </div>
+          <div class="col-xs-12">
             <p class="lead">
-              PhenoPackets were designed by, and intended to be used by, the diverse community of researchers, clinicians, educators
-              and curators that rely upon rich, detailed, computable knowledge to do their work.
+              Additional information about PhenoPackets may be found in the following GitHub repositories:
             </p>
+          </div>
+          <div class="col-xs-offset-1 col-xs-11">
+            <ul class="list-unstyled">
+              <li>
+                <a href="https://github.com/phenopackets" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Organization
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Format
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  PhenoPackets Wiki
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Java Reference Implementation
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Python Tools
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/phenopackets/pxftools" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  Java Tools
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <a href="#a-documentation-detailed" class="btn btn-light"
+          <div class="text-center">
+            <a href="#a-documentation-detailed" class="btn btn-dark"
               onclick=$("#a-documentation-detailed").toggleClass('hidden');>
               Details
             </a>
@@ -447,7 +535,7 @@
 <!--
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <div class="row">
+            <div class="row row-inset">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h2>Our Work</h2>
                     <hr class="small">
@@ -488,22 +576,20 @@
     </section>
 -->
 
-    <!-- Call to Action -->
+    <!-- Call to Action
 
-<!--
     <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row row-inset">
+          <div class="col-xs-12 text-center">
+            <h3>The buttons below are impossible to resist.</h3>
+            <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+            <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+          </div>
         </div>
+      </div>
     </aside>
--->
-
+ -->
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -535,14 +621,16 @@
                   <a href="https://twitter.com/phenopack" target="_blank">
                     <i class="fa fa-twitter fa-fw fa-3x"></i>
                   </a>
-                  </li>
+                </li>
               </ul>
               <hr class="small">
               <p class="text-muted">Copyright &copy; PhenoPackets.org 2016</p>
             </div>
         </div>
       </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg">
+          <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+        </a>
     </footer>
 
     <!-- jQuery -->
