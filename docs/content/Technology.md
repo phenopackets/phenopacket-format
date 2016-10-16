@@ -1,7 +1,3 @@
-# Technology - Standards and Implementation
-
-The online supplementary material to this article presents the version 1.0 of the PXF standard proposed in this article. The format defines the required information expected to be transmitted about each individual – aka a  “Phenopacket”; it includes items such as as patient identifier (non-PHI), age or age group, sex, and a list of one or more phenotypic abnormalities represented by ontology terms. The use of HPO is recommended but if not possible, an alternative terminology as represented in the International Committee of Human Phenotype Terminologies (ICPHT), an activity of the International Rare Disease Research Consortium (IRDiRC), is acceptable. Figure 1 provides a summary of the Phenopacket exchange ecosystem, and the online supplement provides concrete examples of PXF encoded in several exchange formats such as XML, JSON, and RDF. Note that PXF is designed to be compatible with a variety of rare disease phenotyping efforts, such as 100,000 genomes17.
-
 ### What is in a Phenopacket?
 
 Achieving a functional and community-adopted PXF standard will require addressing several critical requirements, which are only partially fulfilled by this first release of Level 1 of the standard. Here we detail the basic level 1 components, and urge the community to participate in helping extend and evaluate the PXF:
@@ -43,8 +39,12 @@ Evidence could include items of the following:
 * clinical trials
 
 
-# Tutorial
+# Technology - Standards and Implementation
 
+The online supplementary material to this article presents the version 1.0 of the PXF standard proposed in this article. The format defines the required information expected to be transmitted about each individual – aka a  “Phenopacket”; it includes items such as as patient identifier (non-PHI), age or age group, sex, and a list of one or more phenotypic abnormalities represented by ontology terms. The use of HPO is recommended but if not possible, an alternative terminology as represented in the International Committee of Human Phenotype Terminologies (ICPHT), an activity of the International Rare Disease Research Consortium (IRDiRC), is acceptable. Figure 1 provides a summary of the Phenopacket exchange ecosystem, and the online supplement provides concrete examples of PXF encoded in several exchange formats such as XML, JSON, and RDF. Note that PXF is designed to be compatible with a variety of rare disease phenotyping efforts, such as 100,000 genomes17.
+
+
+# A PhenoPacket Example in YAML
 
 Phenopackets can be encoded in either JSON or YAML, there is no
 difference between the two. We will use YAML here for compactness.
