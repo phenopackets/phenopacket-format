@@ -12,7 +12,7 @@
     http-equiv="X-UA-Compatible" content="IE=edge">
   <meta
     name="viewport"
-    content="minimum-scale=1.001,maximum-scale=1.001,user-scalable=no,initial-scale=1.001">
+    content="minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width,initial-scale=1">
 
   <meta
     name="apple-mobile-web-app-capable"
@@ -70,53 +70,50 @@
       oReq.open("GET", url);
       oReq.send();
     }
-    loadMarkdown("content/Idea.md", 'an-idea-detailed-markdown');
+    loadMarkdown("content/Vision.md", 'a-vision-detailed-markdown');
     loadMarkdown("content/Technology.md", 'a-technology-detailed-markdown');
     loadMarkdown("content/Community.md", 'a-community-detailed-markdown');
     loadMarkdown("content/Documentation.md", 'a-documentation-detailed-markdown');
   </script>
 
-
-<style>
-.carousel-inner .item a img {
-  height:35px;
-  margin: 0;
-  padding: 0;
-}
-
-@media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-inner .item {
-      opacity: 0;
-      left: 0;
-      transition: opacity 1s, transform 5s;
+  <style>
+    .carousel-inner .item a img {
+      height:35px;
+      margin: 0;
+      padding: 0;
     }
 
-    .carousel-inner .active {
-      opacity: 1;
-    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      .carousel-inner .item {
+        opacity: 0;
+        left: 0;
+        transition: opacity 1s, transform 5s;
+      }
 
-    .carousel-inner > .item.next,
-    .carousel-inner > .item.active.right {
-      -webkit-transform: translate3d(50%, 0, 0);
-              transform: translate3d(50%, 0, 0);
-      left: 0;
-    }
-    .carousel-inner > .item.prev,
-    .carousel-inner > .item.active.left {
-      left: 0;
-      -webkit-transform: translate3d(-50%, 0, 0);
-              transform: translate3d(-50%, 0, 0);
-    }
-    .carousel-inner > .item.next.left,
-    .carousel-inner > .item.prev.right,
-    .carousel-inner > .item.active {
-      -left-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-    }
-}
+      .carousel-inner .active {
+        opacity: 1;
+      }
 
-</style>
-
+      .carousel-inner > .item.next,
+      .carousel-inner > .item.active.right {
+        -webkit-transform: translate3d(50%, 0, 0);
+                transform: translate3d(50%, 0, 0);
+        left: 0;
+      }
+      .carousel-inner > .item.prev,
+      .carousel-inner > .item.active.left {
+        left: 0;
+        -webkit-transform: translate3d(-50%, 0, 0);
+                transform: translate3d(-50%, 0, 0);
+      }
+      .carousel-inner > .item.next.left,
+      .carousel-inner > .item.prev.right,
+      .carousel-inner > .item.active {
+        -left-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+      }
+    }
+  </style>
 </head>
 
 
@@ -141,7 +138,7 @@
         <a href="#phenopackets-are" onclick=$("#menu-close").click();>About PhenoPackets</a>
         <ul>
           <li>
-            <a href="#an-idea" onclick=$("#menu-close").click();>The Idea</a>
+            <a href="#a-vision" onclick=$("#menu-close").click();>The Vision</a>
           </li>
           <li>
             <a href="#a-technology" onclick=$("#menu-close").click();>The Technology</a>
@@ -162,14 +159,11 @@
 
   <header id="top" class="header">
     <div class="text-vertical-center">
-      <img src="site/PhenoPackets_Logo.png" style="margin-top:0;">
-      <br>
+      <img src="site/PhenoPackets_Logo.png" style="margin-top:10px;">
       <br>
       <br>
       <h1>PhenoPackets</h1>
       <h3><b>Open and Computable Bioinformation</b></h3>
-      <br>
-      <br>
       <br>
       <br>
       <a href="#phenopackets-are" class="btn btn-dark btn-lg">
@@ -178,469 +172,420 @@
     </div>
   </header>
 
-    <!-- About -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="phenopackets-are" class="services bg-primary">
-      <div class="container">
-        <div class="row row-inset">
+  <section id="phenopackets-are" class="services bg-primary">
+    <div class="container">
+      <div class="row row-inset">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <h2>PhenoPackets Are …</h2>
+          <hr class="small">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <a href="#a-vision" class="btn-fa">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
+                  </a>
+                </span>
+                <h4>
+                  <strong>A Vision</strong>
+                </h4>
+                <p>
+                  An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
+                  A solution to the Tower of Babel problem of diverse, sometimes siloed, biological databases, terminologies,
+                  and species.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <a href="#a-technology" class="btn-fa">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-cogs fa-stack-1x text-primary"></i>
+                  </a>
+                </span>
+                <h4>
+                  <strong>A Technology</strong>
+                </h4>
+                <p>
+                  A language-neutral structured knowledge representation with encodings in JSON and YAML, and corresponding
+                  implementations and tools in several languages (Java, JavaScript, Python and More).
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="service-item">
+                <span class="fa-stack fa-4x">
+                  <a href="#a-community" class="btn-fa">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-user-md fa-stack-1x text-primary"></i>
+                  </a>
+                </span>
+                <h4>
+                  <strong>A Community</strong>
+                </h4>
+                <p>
+                  Supported by researchers, clinicians, model organism databases and commercial integration efforts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="a-vision" class="services bg-secondary">
+    <div class="container">
+      <div class="row row-inset">
+        <div class="col-xs-12 text-center">
+          <span class="fa-stack fa-4x">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
+          </span>
+          <h3>The Vision of PhenoPackets</h3>
+          <p class="lead">
+            An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
+          </p>
+          <p class="lead">
+            A language-neutral data format specification and several language-specific implementations and tools.
+          </p>
+          <a href="#a-vision-detailed" class="btn btn-dark"
+            onclick=$("#a-vision-detailed").toggleClass('hidden');>
+            Details
+          </a>
+        </div>
+      </div>
+
+      <div class="row hidden" id="a-vision-detailed">
+        <div class="col-xs-12">
+          <div id="a-vision-detailed-markdown" class="markdown">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="a-technology" class="services bg-primary">
+    <div class="container">
+      <div class="row row-inset">
+        <div class="col-xs-12 text-center">
+          <span class="fa-stack fa-4x bg-primary">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-cogs fa-stack-1x text-primary"></i>
+          </span>
+          <h3>The Technology of PhenoPackets</h3>
+          <p class="lead">
+            There are currently encodings of PhenoPackets specified for YAML and JSON, as well
+            several implementations in various languages such as Java, JavaScript, and Python.
+          </p>
+        </div>
+        <div class="col-xs-12">
+          <p class="lead">
+            Source code and examples of PhenoPackets technology may be found in the following GitHub repositories:
+          </p>
+        </div>
+        <div class="col-xs-offset-1 col-xs-11">
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://github.com/phenopackets" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Organization
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Format
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Wiki
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Java Reference Implementation
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Python Tools
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/pxftools" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Java Tools
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <a href="#a-technology-detailed" class="btn btn-dark"
+            onclick=$("#a-technology-detailed").toggleClass('hidden');>
+            Details
+          </a>
+        </div>
+
+      </div>
+
+      <div class="row hidden" id="a-technology-detailed">
+        <div class="col-xs-12">
+          <div id="a-technology-detailed-markdown" class="markdown">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="a-community" class="services bg-secondary">
+    <div class="container">
+      <div class="row row-inset">
+        <div class="col-xs-12 text-center">
+          <span class="fa-stack fa-4x xbg-primary">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-user-md fa-stack-1x text-primary"></i>
+          </span>
+          <h3>The Community of PhenoPackets</h3>
+          <p class="lead">
+            PhenoPackets were designed by, and intended to be used by, the diverse community of researchers, clinicians, educators
+            and curators that rely upon rich, detailed, computable knowledge to do their work.
+          </p>
+
+
+          <div id="partnerCarousel" class="well well-sm carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-orphanet.png" alt="Orphanet">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-globalalliance.jpg" alt="Global Alliance for Genomics and Health">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-monarch.jpg" alt="Monarch Initiative">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-do.png" alt="Disease Ontology">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-hpo.jpg" alt="Human Phenotype Ontology">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-go.png" alt="Gene Ontology">
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-xs-4">
+                  <a href="#">
+                    <img src="content/partners/logo-mygene.png" alt="Mygene">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <a href="#a-community-detailed" class="btn btn-dark"
+            onclick=$("#a-community-detailed").toggleClass('hidden');>
+            Details
+          </a>
+        </div>
+      </div>
+
+      <div class="row hidden" id="a-community-detailed">
+        <div class="col-xs-12">
+          <div id="a-community-detailed-markdown" class="markdown">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="documentation" class="services bg-primary">
+    <div class="container">
+      <div class="row row-inset">
+        <div class="col-xs-12 text-center">
+          <span class="fa-stack fa-4x bg-primary">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-user-md fa-stack-1x text-primary"></i>
+          </span>
+          <h3>Documentation and References</h3>
+        </div>
+        <div class="col-xs-12">
+          <p class="lead">
+            Additional information about PhenoPackets may be found in the following GitHub repositories:
+          </p>
+        </div>
+        <div class="col-xs-offset-1 col-xs-11">
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://github.com/phenopackets" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Organization
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Format
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                PhenoPackets Wiki
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Java Reference Implementation
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Python Tools
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/phenopackets/pxftools" target="_blank">
+                <i class="fa fa-github fa-fw"></i>
+                Java Tools
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <a href="#a-documentation-detailed" class="btn btn-dark"
+            onclick=$("#a-documentation-detailed").toggleClass('hidden');>
+            Details
+          </a>
+        </div>
+      </div>
+
+      <div class="row hidden" id="a-documentation-detailed">
+        <div class="col-xs-12">
+          <div id="a-documentation-detailed-markdown" class="markdown">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div id="contact" class="row">
           <div class="col-lg-10 col-lg-offset-1 text-center">
-            <h2>PhenoPackets Are …</h2>
+            <span class="fa-stack fa-4x" style="color: transparent;">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-comments fa-stack-1x text-primary"></i>
+            </span>
+            <h4>
+              <strong>PhenoPackets.org</strong>
+            </h4>
+            <p>Earth</p>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-link fa-fw"></i>
+                <a
+                  href="http://phenopackets.org"
+                  target="_blank">
+                  http://phenopackets.org
+                </a>
+              </li>
+              <li>
+                <i class="fa fa-twitter fa-fw"></i>
+                <a
+                  href="https://twitter.com/phenopack"
+                  target="_blank">
+                  &commat;phenopack
+                </a>
+              </li>
+              <li>
+                <i class="fa fa-twitter fa-fw"></i>
+                <a
+                  href="https://twitter.com/hashtag/phenopackets"
+                  target="_blank">
+                  &num;phenopackets
+                </a>
+              </li>
+              <li>
+                <i class="fa fa-envelope-o fa-fw"></i>
+                <a
+                  href="mailto:phenopackets_org_email_placeholder">
+                  phenopackets_org_email_placeholder
+                </a>
+              </li>
+            </ul>
+            <br>
             <hr class="small">
-            <div class="row">
-              <div class="col-md-4 col-sm-12">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <a href="#an-idea" class="btn-fa">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
-                    </a>
-                  </span>
-                  <h4>
-                    <strong>An Idea</strong>
-                  </h4>
-                  <p>
-                    An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
-                    A solution to the Tower of Babel problem of diverse, sometimes siloed, biological databases, terminologies,
-                    and species.
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <a href="#a-technology" class="btn-fa">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-cogs fa-stack-1x text-primary"></i>
-                    </a>
-                  </span>
-                  <h4>
-                    <strong>A Technology</strong>
-                  </h4>
-                  <p>
-                    A language-neutral structured knowledge representation with encodings in JSON and YAML, and corresponding
-                    implementations and tools in several languages (Java, JavaScript, Python and More).
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="service-item">
-                  <span class="fa-stack fa-4x">
-                    <a href="#a-community" class="btn-fa">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-user-md fa-stack-1x text-primary"></i>
-                    </a>
-                  </span>
-                  <h4>
-                    <strong>A Community</strong>
-                  </h4>
-                  <p>
-                    Supported by researchers, clinicians, model organism databases and commercial integration efforts.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="an-idea" class="services bg-secondary">
-      <div class="container">
-        <div class="row row-inset">
-          <div class="col-xs-12 text-center">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-lightbulb-o fa-stack-1x text-primary"></i>
-            </span>
-            <h3>The Idea of PhenoPackets</h3>
-            <p class="lead">
-              An Open and Computable Knowledge-sharing Technology designed for capturing and sharing structured bioinformatic knowledge.
+            <p class="text-muted">
+              Site copyright &copy; PhenoPackets.org 2016
             </p>
-            <p class="lead">
-              A language-neutral data format specification and several language-specific implementations and tools.
-            </p>
-            <a href="#an-idea-detailed" class="btn btn-dark"
-              onclick=$("#an-idea-detailed").toggleClass('hidden');>
-              Details
-            </a>
-          </div>
-        </div>
-
-        <div class="row hidden" id="an-idea-detailed">
-          <div class="col-xs-12">
-            <div id="an-idea-detailed-markdown" class="markdown">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="a-technology" class="services bg-primary">
-      <div class="container">
-        <div class="row row-inset">
-          <div class="col-xs-12 text-center">
-            <span class="fa-stack fa-4x bg-primary">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-cogs fa-stack-1x text-primary"></i>
-            </span>
-            <h3>The Technology of PhenoPackets</h3>
-            <p class="lead">
-              There are currently encodings of PhenoPackets specified for YAML and JSON, as well
-              several implementations in various languages such as Java, JavaScript, and Python.
+            <p class="small text-muted">
+              Theme based on
+              <a href="https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/"
+                target="_blank">
+                Stylish Portfolio
+              </a>
+              , copyright &copy; 2013-2016 Blackrock Digital LLC
+              <br>DNA image adapted from Wikimedia Commons
+              <a href="https://commons.wikimedia.org/wiki/File:DNA_com_GGN.jpg"
+                target="_blank">
+                DNA com GGN
+              </a>
+              <br>Partner Logos verbiage here
             </p>
           </div>
-          <div class="col-xs-12">
-            <p class="lead">
-              Source code and examples of PhenoPackets technology may be found in the following GitHub repositories:
-            </p>
-          </div>
-          <div class="col-xs-offset-1 col-xs-11">
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://github.com/phenopackets" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Organization
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Format
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Wiki
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Java Reference Implementation
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Python Tools
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/pxftools" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Java Tools
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="text-center">
-            <a href="#a-technology-detailed" class="btn btn-dark"
-              onclick=$("#a-technology-detailed").toggleClass('hidden');>
-              Details
-            </a>
-          </div>
-
-        </div>
-
-        <div class="row hidden" id="a-technology-detailed">
-          <div class="col-xs-12">
-            <div id="a-technology-detailed-markdown" class="markdown">
-            </div>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+      <a id="to-top" href="#top" class="btn btn-dark btn-lg">
+        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
+      </a>
+  </footer>
 
-
-    <section id="a-community" class="services bg-secondary">
-      <div class="container">
-        <div class="row row-inset">
-          <div class="col-xs-12 text-center">
-            <span class="fa-stack fa-4x xbg-primary">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-user-md fa-stack-1x text-primary"></i>
-            </span>
-            <h3>The Community of PhenoPackets</h3>
-            <p class="lead">
-              PhenoPackets were designed by, and intended to be used by, the diverse community of researchers, clinicians, educators
-              and curators that rely upon rich, detailed, computable knowledge to do their work.
-            </p>
-
-
-            <div id="partnerCarousel" class="well well-sm carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="item active">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-orphanet.png" alt="Orphanet">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-globalalliance.jpg" alt="Global Alliance for Genomics and Health">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-monarch.jpg" alt="Monarch Initiative">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-do.png" alt="Disease Ontology">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-hpo.jpg" alt="Human Phenotype Ontology">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-go.png" alt="Gene Ontology">
-                    </a>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="col-xs-4">
-                    <a href="#">
-                      <img src="content/partners/logo-mygene.png" alt="Mygene">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <a href="#a-community-detailed" class="btn btn-dark"
-              onclick=$("#a-community-detailed").toggleClass('hidden');>
-              Details
-            </a>
-          </div>
-        </div>
-
-        <div class="row hidden" id="a-community-detailed">
-          <div class="col-xs-12">
-            <div id="a-community-detailed-markdown" class="markdown">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-
-    <section id="documentation" class="services bg-primary">
-      <div class="container">
-        <div class="row row-inset">
-          <div class="col-xs-12 text-center">
-            <span class="fa-stack fa-4x bg-primary">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-user-md fa-stack-1x text-primary"></i>
-            </span>
-            <h3>Documentation and References</h3>
-          </div>
-          <div class="col-xs-12">
-            <p class="lead">
-              Additional information about PhenoPackets may be found in the following GitHub repositories:
-            </p>
-          </div>
-          <div class="col-xs-offset-1 col-xs-11">
-            <ul class="list-unstyled">
-              <li>
-                <a href="https://github.com/phenopackets" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Organization
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-format" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Format
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-format/wiki/Getting-Started" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  PhenoPackets Wiki
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-reference-implementation" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Java Reference Implementation
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/phenopacket-python" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Python Tools
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/phenopackets/pxftools" target="_blank">
-                  <i class="fa fa-github fa-fw"></i>
-                  Java Tools
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="text-center">
-            <a href="#a-documentation-detailed" class="btn btn-dark"
-              onclick=$("#a-documentation-detailed").toggleClass('hidden');>
-              Details
-            </a>
-          </div>
-        </div>
-
-        <div class="row hidden" id="a-documentation-detailed">
-          <div class="col-xs-12">
-            <div id="a-documentation-detailed-markdown" class="markdown">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Callout -->
-
-<!--
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
--->
-
-
-    <!-- Portfolio -->
-
-<!--
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row row-inset">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-            </div>
-        </div>
-    </section>
--->
-
-    <!-- Call to Action
-
-    <aside class="call-to-action bg-primary">
-      <div class="container">
-        <div class="row row-inset">
-          <div class="col-xs-12 text-center">
-            <h3>The buttons below are impossible to resist.</h3>
-            <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-            <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-          </div>
-        </div>
-      </div>
-    </aside>
- -->
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div id="contact" class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-              <h4>
-                <strong>PhenoPackets.org</strong>
-              </h4>
-              <p>Earth</p>
-              <ul class="list-unstyled">
-                <li>
-                  <i class="fa fa-link fa-fw"></i>
-                  <a
-                    href="http://phenopackets.org"
-                    target="_blank">
-                    http://phenopackets.org
-                  </a>
-                </li>
-                <li>
-                  <i class="fa fa-envelope-o fa-fw"></i>
-                  <a href="mailto:info@monarchinitiative.org">
-                    info@monarchinitiative.org
-                  </a>
-                </li>
-              </ul>
-              <br>
-              <ul class="list-inline">
-                <li>
-                  <a href="https://twitter.com/phenopack" target="_blank">
-                    <i class="fa fa-twitter fa-fw fa-3x"></i>
-                  </a>
-                </li>
-              </ul>
-              <hr class="small">
-              <p class="text-muted">Copyright &copy; PhenoPackets.org 2016</p>
-            </div>
-        </div>
-      </div>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg">
-          <i class="fa fa-chevron-up fa-fw fa-1x"></i>
-        </a>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="site/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="site/js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script>
+  <script src="site/js/jquery.js"></script>
+  <script src="site/js/bootstrap.min.js"></script>
+  <script>
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
@@ -691,9 +636,9 @@
             }
         }
     });
-    </script>
+  </script>
 
-    <script>
+  <script>
     $('#partnerCarousel').carousel({
       interval: 5000
     })
@@ -712,7 +657,7 @@
         $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
       }
     });
-    </script>
+  </script>
 
 </body>
 
