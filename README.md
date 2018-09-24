@@ -5,6 +5,10 @@
 [![Build Status](https://travis-ci.org/phenopackets/phenopacket-format.svg?branch=master)](https://travis-ci.org/phenopackets/patient-phenotype-submission-format)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.46742.svg)](https://doi.org/10.5281/zenodo.46742)  
 
+## CAUTION THIS REPO HAS BEED RETIRED!
+
+This initial implementation has now been archived - please refer to the [phenopacket-schema](https://github.com/phenopackets/phenopacket-schema) repository for the current implementation.
+
 
 ##  Overview
 
